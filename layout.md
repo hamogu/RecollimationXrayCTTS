@@ -1,4 +1,4 @@
 abstract.tex
 introduction.tex
-results.tex
+Model.tex
 results_table.tex
