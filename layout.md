@@ -1,4 +1,4 @@
 abstract.tex
 introduction.tex
 disk_winds.tex
-results_table.tex
+our_equations.tex
