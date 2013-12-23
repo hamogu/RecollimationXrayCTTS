@@ -1,4 +1,4 @@
 abstract.tex
 introduction.tex
-Model.tex
+disk_winds.tex
 results_table.tex
