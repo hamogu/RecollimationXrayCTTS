@@ -1,6 +1,6 @@
 To derive the position of the shock front in the $(z, \omega)$ plane where the pre-shock ram pressure of the stellar wind and the post-shock thermal pressure equal the external pressure $P(z)$, we need to calculate the pre-shock density $\rho_0$ and the pre-shock velocity perpendicular to the shock front $v_0$.
 
-For the given mass loss rate $\dot M$ of the stellar wind, the wind density at any distance $r=\sqrt{z^2+\omega^2}$ from the central star is 
+We assume a pressure driven stellar wind, that is spherically symmetric and is accelerated to its final velocity $v_{\infty}$ within a few stellar radii before any interaction takes place. For the given mass loss rate $\dot M$ of the stellar wind, the wind density at any distance $r=\sqrt{z^2+\omega^2}$ from the central star is 
 \begin{equation}\label{eqn:rho}
 \rho(r) = \frac{\dot M}{4 \pi r^2 v_{\infty}}\ .
 \end{equation}
@@ -13,18 +13,22 @@ with
 \psi+\alpha = - \theta \ .
 \end{equation}
 Again, Figure~\ref{fig:sketch} shows how two of the angles in this equation can be calculated, so that $\psi$ can be determined. First,
-\begin{equation}
+\begin{equation}\label{eqn:theta}
 \tan\theta = \frac{\omega}{z}\ ;
 \end{equation}
 second, the angle $\alpha$ is given by the derivative of the position of the shock front:
 \begin{equation}\label{eqn:deriv}
 \frac{\rm{d}\omega}{\rm{d}z} = \frac{\sin \alpha}{\cos \alpha} = \tan{\alpha}
 \end{equation}
-Inserting equation~\ref{eqn:rho} to \ref{eqn:deriv} into eqn.~\ref{eqn:4}, we arrive at an ordinary differential equation, that describes the functional form of the shape of the shock front:
+This gives:
+\begin{equation}\label{eqn:psi}
+\psi = \atan{\frac{\omega}{z}} - \frac{\rm{d}\omega}{\rm{d}z}\ .
+\end{equation}
+Inserting equation~\ref{eqn:rho} and \ref{eqn:v0} into eqn.~\ref{eqn:4}, we arrive at an ordinary differential equation, that describes the functional form of the shape of the shock front:
 \begin{equation}
 P(z) = \frac{3}{4}\rho_0v_0^2 = \frac{3}{4} \frac{\dot{M}}{4\pi v_{\infty}(z^2+\omega^2)} v_{\infty}^2 \sin^2(\psi)
 \end{equation}
-This equation can be simplified to
+Inserting eqn.~\ref{eqn:psi} this can be simplified to
 \begin{equation}\label{eqn:ode}
 \frac{\rm{d}\omega}{\rm{d}z} = \frac{\omega z \pm \sqrt{c (\omega^2+z^2)^2 (\omega^2+z^2-c(\omega^2+z^2)^2)}}{z^2 - c(\omega^2+z^2)^2}
 \end{equation}
