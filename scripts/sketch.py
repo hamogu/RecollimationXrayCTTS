@@ -1,3 +1,5 @@
+import numpy as np
+
 from matplotlib import pyplot as plt
 from matplotlib.path import Path
 import matplotlib.patches as patches
@@ -13,7 +15,7 @@ ax.yaxis.set_visible(False)
 for i in ['top', 'bottom', 'right', 'left']:
     ax.spines[i].set_visible(False)
 ax.text(0.05, .9, '$z$', fontsize=30, horizontalalignment='center', verticalalignment='center')
-ax.text(0.9, .05, '$r$', fontsize=30, horizontalalignment='center', verticalalignment='center')
+ax.text(0.9, .05, r'$\bar{\omega}$', fontsize=30, horizontalalignment='center', verticalalignment='center')
 
 def shock_surface(x):
     '''calculate a function that makes it easy to define the variables of the geometry.'''
