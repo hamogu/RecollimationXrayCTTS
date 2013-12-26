@@ -1,0 +1,34 @@
+To derive the position of the shock front in the $(z, \omega) plane where the pre-shock ram pressure of the stellar wind and the post-shock thermal pressure equal the external pressure $P(z)$, we need to calculate the pre-shock density $\rho_0$ and the pre-shock velocity perpendicular to the shock front $v_0$.
+
+For the given mass loss rate $\dot M$ of the stellar wind, the wind density at any distance $r=\sqrt{z^2+\omega^2}$ from the central star is 
+\begin{equation}\label{eqn:rho}
+\rho(r) = \frac{\dot M}{4 \pi r^2 v_{\inf}}\ .
+\end{equation}
+Figure~\ref{fig:sketch} shows that $v_0$ depends on the position of the shock:
+\begin{equation}\label{eqn:v0}
+v_0 = v_{\inf} \sin \psi
+\end{equation}
+with 
+\begin{equation}\label{eqn:angle}
+\psi+\alpha = - \theta \ .
+\end{equation}
+Again, Figure~\ref{fig:sketch} shows how two of the angles in this equation can be calculated, so that $\psi$ can be determined. First,
+\begin{equation}
+\tan\theta = \frac{\omega}{\z}\ ,
+\end{equation}
+second, the angle $\alpha$ is given by the derivative of the position of the shock front:
+\begin{equation}\label{eqn:deriv}
+\frac{\rm{d}omega}{\rm{d}z} = \frac{\sin \alpha}{\cos \alpha} = \tan{alpha}
+\end{equation}
+Inserting equation~\ref{eqn:rho} to \ref{eqn:deriv} into eqn.~\ref{eqn:4}, we arrive at an ordinary differential equation, that describes the functional form of the shape of the shock front:
+\begin{equation}
+P(z) = \frac{3}{4}\rho_0\v_0^2 = \frac{3}{4} \frac{\dot{M}}{4\pi\v_{\inf}(z^2+\omega^2)}v_{\inf}^2 \sin^2(\psi)
+\end{equation}
+This equation can be rewritten as
+\begin{equation}\label{eqn:ode}
+\frac{\rm{d}omega}{\rm{d}z} = \frac{\omega z \pm \sqrt{c (\omega^2+z^2)^2 (\omega^2+z^2-c(\omega^2+z^2)^2)}}{z^2 - c(\omega^2+z^2)^2}
+\end{equation}
+with
+\begin{equation}
+c = \frac{16\pi P(z)}{3 \dot{M} v_{\inf}}\ .
+\end{equation}
