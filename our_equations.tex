@@ -1,6 +1,6 @@
 \section{The model}
 
-In this section we develop an analytical model for the stellar wind that expands along the jet axis. The wind is confined by the pressure of the surrounding disk wind. Those two flows are separated by a contact discontinuity, whose exact position is given by pressure equilibrium between the outer, disk wind component and the inner, stellar wind component. We assume that the stellar wind is initially emitted radially. As it encounters the contact discontinuity, the velocity component perpendicular to the discontinuity is shocked. Thus, our model needs to distinguish three zones: (i) the cold pre-shock stellar wind, (ii) the host post-shock stellar wind, and (iii) the disk wind. Our goal is to calculate the geometrical shape of the stellar wind shock, since this determines the velocity jump across the shock front and thus the temperature of the post-shock plasma.
+In this section we develop an analytical model for the interface between the stellar wind and the surrounding disk wind. The presure of the disk wind collimates the stellar wind into a jet. The two flows are separated by a contact discontinuity, whose exact position is given by pressure equilibrium between the outer, disk wind component and the inner, stellar wind component. We assume that the stellar wind is initially emitted radially. As it encounters the contact discontinuity, the velocity component perpendicular to the discontinuity is shocked. Thus, our model needs to distinguish three zones: (i) the cold pre-shock stellar wind, (ii) the host post-shock stellar wind, and (iii) the disk wind. Our goal is to calculate the geometrical shape of the stellar wind shock, since this determines the velocity jump across the shock front and thus the temperature of the post-shock plasma. 
 
 The Rankine-Hugoniot jump conditions relate the density, velocity and pressure on both sides of a strong shock. For ideal gases and non-oblique shocks the conservation of mass, momentum and energy across the shock can be written as follows \citep[][chap.~7, \S~15]{http://adsabs.harvard.edu/abs/1967pswh.book.....Z}, where the state before the front of the shock front is marked by the index 0, that behind the shock by index 1:
 \begin{eqnarray}
@@ -10,16 +10,17 @@ The Rankine-Hugoniot jump conditions relate the density, velocity and pressure o
 \end{eqnarray}
 where $\rho$ denotes the total mass density of the gas and $P$ its pressure. 
 
-Initially, the stellar wind is relatively cold and thus the thermodynamic pressure can be neglected, setting $P_0=0$. In the strong shock limit $v_0=4\;v_1$. With these two simplifications, eqn.~\ref{eqn:RH3} yields
-\begin{equation} \label{eqn:4}
-P_1 = \frac{3}{4} \rho_0 v_0^2
-\end{equation}
+Initially, the stellar wind is relatively cold and thus the thermodynamic pressure can be neglected, setting $P_0=0$.
+The shock front moves outward, until the pressure of the stellar wind equals the post-shock presure and the contact discontinuity adjusts to equilize the the post-shock presure and the confining external pressure of the disk wind. 
 
-In our case we are dealing with an oblique shock (Figure~\ref{fig:sketch}). Equations~\ref{RH1} to \ref{eqn:4} stay valid if only the velocity component perpendicular to the shock front is taken as $v_0$ and $v_0$. 
+In our case we are dealing with an oblique shock (Figure~\ref{fig:sketch}). Equations~\ref{RH1} to \ref{eqn:RH3} stay valid if only the velocity component perpendicular to the shock front is taken as $v_0$ and $v_0$. 
 Figure~\ref{fig:sketch} shows the geometry of the problem. We use a cylindrical coordinate system with an origin on the central star. We place the $z$-axis along the jet outflow direction and assume rotational symmetry around the jet axis. Thus, the flow can effectively be written in $(z,\omega)$. 
 
 We treat the disk wind as an outer boundary condition with a given pressure profile and concentrate on the description of the stellar wind. To simplify the equations we adopt Kompaneets' approximation \citep{1960SPhD....5...46K} which states that there is no axial pressure gradient so that the pressure profile of the disk wind, which is given as a boundary condition, extends through all layers of the outflow:
 \begin{equation}
 P(z,\theta, \omega) = P(z)\,.
 \end{equation}
-
+With this we can write:
+\begin{equation}
+\rho_0 v_0^2 = P_{\textrm{post-shock}} = P_{\textrm{extern}}(z)
+\end{equation}
