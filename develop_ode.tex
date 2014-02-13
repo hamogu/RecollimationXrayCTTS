@@ -30,11 +30,11 @@ P(z) = \rho_0v_0^2 = \frac{\dot{M}}{4\pi v_{\infty}(z^2+\omega^2)} v_{\infty}^2 
 \end{equation}
 Inserting eqn.~\ref{eqn:psi} this can be simplified to
 \begin{equation}\label{eqn:ode}
-\frac{\rm{d}\omega}{\rm{d}z} = \frac{\omega z \pm (\omega^2+z^2)^{3/2} \sqrt{c (1-c(\omega^2+z^2))}}{z^2 - c(\omega^2+z^2)^2}
+\frac{\rm{d}\omega}{\rm{d}z} = \tan{\atan{\frac{\omega}{z}}-\asin{\frac{r}{R_0}}}
 \end{equation}
 with
 \begin{equation}
-c(z) = \frac{4\pi P(z)}{\dot{M} v_{\infty}}\ = \frac{1}{R_0^2},
+R_0(z) = \sqrt{\frac{\dot{M} v_{\infty}}{4\pi P(z)}},
 \end{equation}
 where $R_0(z)$ is the zylindrical radius of the shock front if no further conditions are placed. In the case of young stars, however, there is another constraint. Due to the circum-stellar disk the stellar wind cannot expand freely in the $z=0$ plane; it is constrained to $R_{\textrm{shock}}(0) = R_{\textrm{inner}}$. Thus, we start the integration at $R_{\textrm{inner}} = 0.05$~AU.
 
