@@ -39,3 +39,5 @@ R_0(z) = \sqrt{\frac{\dot{M} v_{\infty}}{4\pi P(z)}},
 where $R_0(z)$ is the zylindrical radius of the shock front if no further conditions are placed. In the case of young stars, however, there is another constraint. Due to the circum-stellar disk the stellar wind cannot expand freely in the $z=0$ plane; it is constrained to $R_{\textrm{shock}}(0) = R_{\textrm{inner}}$. Thus, we start the integration at $R_{\textrm{inner}} = 0.05$~AU.
 
 For general $P(z)$ this ODE needs to be solved numerically\footnote{It is possible to remove all trigonometric functions from eqn.~\ref{eqn:ode} by means of addition formulae, but that introduces singularities into the solution. Thus, we numerically solve the ODE in the form of eqn.~\ref{eqn:ode}.}. 
+
+The solution to the ODE determines the locations of the shock front. Thus allows us to calculate the pre-shock velocity perpendicular to the shock front using eqn.~\ref{eqn:v0} and the post-shock temperature $T$.
