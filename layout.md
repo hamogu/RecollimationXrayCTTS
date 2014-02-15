@@ -5,4 +5,5 @@ figures/sketch/sketch.png
 develop_ode.tex
 parameters.tex
 disk_winds.tex
+mass loss rates.tex
 notes.tex
