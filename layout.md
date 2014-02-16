@@ -8,4 +8,5 @@ disk_winds.tex
 mass loss rates.tex
 wind speed.tex
 launching radius.tex
+figures/omega_0/omega_0.png
 notes.tex
