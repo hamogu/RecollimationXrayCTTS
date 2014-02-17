@@ -12,4 +12,5 @@ Wind speed.tex
 figures/v_infty/v_infty.png
 launching radius.tex
 figures/omega_0/omega_0.png
+Results.tex
 notes.tex
