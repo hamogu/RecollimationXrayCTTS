@@ -10,7 +10,7 @@ mass loss rates.tex
 figures/dot_m/dot_m.png
 Wind speed.tex
 figures/v_infty/v_infty.png
-launching radius.tex
+starting point of integration.tex
 figures/omega_0/omega_0.png
 Results.tex
 figures/result/result.png
