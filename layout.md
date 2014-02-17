@@ -15,4 +15,5 @@ figures/omega_0/omega_0.png
 Results.tex
 figures/result/result.png
 Conclusion.tex
+Summary.tex
 notes.tex
