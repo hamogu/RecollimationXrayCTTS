@@ -6,7 +6,7 @@ develop_ode.tex
 parameters.tex
 disk_winds.tex
 mass loss rates.tex
-wind speed.tex
+Wind speed.tex
 launching radius.tex
 figures/omega_0/omega_0.png
 notes.tex
