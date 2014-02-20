@@ -46,9 +46,13 @@ path = Path([(.4,.17),(.3,.15),(.25,.21)], [Path.MOVETO, Path.CURVE3, Path.CURVE
 patch = patches.PathPatch(path, facecolor='none', lw=2)
 ax.add_patch(patch)
 
-x = np.arange(0,0.45,0.01)
-ax.plot(0.05+0.35+x, 0.05+3*x**2, lw=3, c='k')
-ax.text(0.85, .68, r'$R_{\rm{contdisc}}(z)$', fontsize=20, horizontalalignment='center', verticalalignment='center')
+x = np.arange(0,0.75,0.01)
+ax.plot(0.05+0.15+x, 0.05+1.2*x**2, lw=3, c='k')
+ax.text(0.87, .75, r'$R_{\rm{contdisc}}(z)$', fontsize=20, horizontalalignment='center', verticalalignment='center')
+
+ax.text(.25,.7, 'stellar\nwind\n(pre-shock)', fontsize=20, ha='center')
+ax.text(.7,.5, 'stellar\nwind\n(post-\nshock)', fontsize=16, ha='center')
+ax.text(.75,.15, 'disk\nwind', fontsize=20, ha='center')
 
 ax.set_xlim([0,1])
 ax.set_ylim([0,1])
