@@ -8,6 +8,7 @@ disk_winds.tex
 figures/P_ext/P_ext.png
 mass loss rates.tex
 figures/dot_m/dot_m.png
+Windspeed.tex
 Wind speed.tex
 figures/v_infty/v_infty.png
 starting point of integration.tex
