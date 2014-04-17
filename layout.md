@@ -17,4 +17,5 @@ initialwindtemperature.tex
 figures/T_0/T_0.png
 Results.tex
 figures/result/result.png
+figures/rhocool/rhocool.png
 Conclusion.tex
