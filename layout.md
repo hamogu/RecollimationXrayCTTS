@@ -13,6 +13,7 @@ Wind speed.tex
 figures/v_infty/v_infty.png
 starting point of integration.tex
 figures/omega_0/omega_0.png
+initialwindtemperature.tex
 Results.tex
 figures/result/result.png
 Conclusion.tex
