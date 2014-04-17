@@ -25,12 +25,12 @@ This gives:
 \psi = \arctan{\frac{\omega}{z}} - \arctan{\frac{\rm{d}\omega}{\rm{d}z}}\ .
 \end{equation}
 Inserting equation~\ref{eqn:rho} and \ref{eqn:v0} into eqn.~\ref{eqn:4}, we arrive at: 
-\begin{equation}
-P(z) = \rho_0v_0^2 = \frac{\dot{M}}{4\pi v_{\infty}(z^2+\omega^2)} v_{\infty}^2 \sin^2(\psi)
+\begin{equation}\label{eqn:P}
+P(z) = \rho_0 v_0^2 = \frac{\dot{M}}{4\pi v_{\infty}(z^2+\omega^2)} v_{\infty}^2 \sin^2(\psi)
 \end{equation}
 Inserting eqn.~\ref{eqn:psi} this gives an ordinary differential equation (ODE), that describes the functional form of the shape of the shock front:
 \begin{equation}\label{eqn:ode}
-\frac{\rm{d}\omega}{\rm{d}z} = \tan\left[\arctan\left(\frac{\omega}{z}\right)-\arcsin\left(\frac{r}{R_0}\right)\right]
+\frac{\rm{d}\omega}{\rm{d}z} = \tan\left[\arctan\left(\frac{\omega}{z}\right)-\arcsin\left(\frac{\sqrt{z^2+\omega^2}}{R_0}\right)\right]
 \end{equation}
 with
 \begin{equation}\label{eqn:r0}
