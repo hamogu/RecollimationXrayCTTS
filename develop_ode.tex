@@ -1,6 +1,6 @@
 To derive the position of the shock front in the $(z, \omega)$ plane where the pre-shock ram pressure of the stellar wind and the post-shock pressure equal the external pressure $P(z)$, we need to calculate the pre-shock density $\rho_0$ and the pre-shock velocity perpendicular to the shock front $v_0$.
 
-We assume a spherically symmetric stallar wind that is accelerated to its final velocity $v_{\infty}$ within a few stellar radii before any interaction takes place. For a given mass loss rate $\dot M$, the wind density at any distance $r$ from the central star is 
+We assume a spherically symmetric stellar wind that is accelerated to its final velocity $v_{\infty}$ within a few stellar radii before any interaction takes place. For a given mass loss rate $\dot M$, the wind density at any distance $r$ from the central star is 
 \begin{equation}\label{eqn:rho}
 \rho(r) = \frac{\dot M}{4 \pi r^2 v_{\infty}}\ .
 \end{equation}
@@ -28,7 +28,7 @@ Inserting equation~\ref{eqn:rho} and \ref{eqn:v0} into eqn.~\ref{eqn:Pofz}, we a
 \begin{equation}\label{eqn:P}
 P(z) = \rho_0 v_0^2 = \frac{\dot{M}}{4\pi v_{\infty}(z^2+\omega^2)} v_{\infty}^2 \sin^2(\psi)
 \end{equation}
-Inserting eqn.~\ref{eqn:psi} this gives an ordinary differential equation (ODE), that describes the functional form of the shape of the shock front:
+Inserting eqn.~\ref{eqn:psi} this gives an ordinary differential equation (ODE), that describes the shape of the shock front:
 \begin{equation}\label{eqn:ode}
 \frac{\rm{d}\omega}{\rm{d}z} = \tan\left[\arctan\left(\frac{\omega}{z}\right)-\arcsin\left(\frac{\sqrt{z^2+\omega^2}}{R_0}\right)\right]
 \end{equation}
@@ -36,7 +36,7 @@ with
 \begin{equation}\label{eqn:r0}
 R_0(z) = \sqrt{\frac{\dot{M} v_{\infty}}{4\pi P(z)}},
 \end{equation}
-where $R_0(z)$ is the maximal cylindrical radius of the shock front. In the case of young stars, however,  the circum-stellar disk constrains the stellar wind which cannot expand beyond the inner hole in the accretion disk. In our model we thus fix $\omega(z=0)$.
+where $R_0(z)$ is the maximal cylindrical radius of the shock front. In the case of young stars the circum-stellar disk constrains the stellar wind which cannot expand beyond the inner hole in the accretion disk at $z=0$ (Section~\ref{sect:omega0}.
 
 The solution to the ODE determines the location of the shock front. This allows us to calculate the pre-shock velocity perpendicular to the shock front using eqn.~\ref{eqn:v0} and the post-shock temperature $T_{\mathrm{post-shock}}$. From eqn.~\ref{eqn:RH3} with negligible pre-shock pressure and $v_0=4\;v_1$ for a strong shock we derive:
 \begin{equation}
