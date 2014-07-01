@@ -1,5 +1,6 @@
 abstract.tex
 introduction.tex
+jet_obs.tex
 our_equations.tex
 figures/sketch/sketch.png
 develop_ode.tex
