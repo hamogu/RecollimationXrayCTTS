@@ -1,7 +1,7 @@
 abstract.tex
 introduction.tex
 jet_obs.tex
-jets_x-ray.tex
+jets_x ray.tex
 papergoal.tex
 our_equations.tex
 figures/sketch/sketch.png
