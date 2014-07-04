@@ -9,6 +9,7 @@ develop_ode.tex
 justificationassumption.tex
 soundspeed.tex
 initialwindtemperature.tex
+Bfield.tex
 parameters.tex
 disk_winds.tex
 figures/P_ext/P_ext.png
