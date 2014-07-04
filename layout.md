@@ -7,6 +7,7 @@ our_equations.tex
 figures/sketch/sketch.png
 develop_ode.tex
 justificationassumption.tex
+soundspeed.tex
 initialwindtemperature.tex
 parameters.tex
 disk_winds.tex
