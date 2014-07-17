@@ -22,5 +22,6 @@ figures/omega_0/omega_0.png
 Results.tex
 figures/result/result.png
 figures/rhocool/rhocool.png
+fitDGTau.tex
 Discussion.tex
 Summary.tex
