@@ -23,5 +23,6 @@ Results.tex
 figures/result/result.png
 figures/rhocool/rhocool.png
 fitDGTau.tex
+figures/DGTaufit/DGTaufit.png
 Discussion.tex
 Summary.tex
