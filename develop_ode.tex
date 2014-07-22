@@ -36,10 +36,10 @@ with
 \begin{equation}\label{eqn:r0}
 R_0(z) = \sqrt{\frac{\dot{M} v_{\infty}}{4\pi P(z)}},
 \end{equation}
-where $R_0(z)$ is the maximal cylindrical radius of the shock front. In the case of young stars the circum-stellar disk constrains the stellar wind which cannot expand beyond the inner hole in the accretion disk at $z=0$ (Section~\ref{sect:omega0}.
+where $R_0(z)$ is the maximal cylindrical radius of the shock front. In the case of young stars the circum-stellar disk constrains the stellar wind which cannot expand beyond the inner hole in the accretion disk at $z=0$ (Section~\ref{sect:omega0}).
 
 The solution to the ODE determines the location of the shock front. This allows us to calculate the pre-shock velocity perpendicular to the shock front using eqn.~\ref{eqn:v0} and the post-shock temperature $T_{\mathrm{post-shock}}$. From eqn.~\ref{eqn:RH3} with negligible pre-shock pressure and $v_0=4\;v_1$ for a strong shock we derive:
 \begin{equation}
 T_{\mathrm{post-shock}}(z) = \frac{3}{16} \frac{\mu m_{\textrm{H}}}{k} v_0(z)^2,\label{eqn:T}
 \end{equation}
-where $m_{\textrm{H}}$ the mass of the hydrogen atom, $k$ the Boltzmann constant and $\mu=0.7$ is the mean particle mass for a highly ionized plasma. For general $P(z)$ the ODE needs to be solved numerically\footnote{It is possible to remove all trigonometric functions from eqn.~\ref{eqn:ode} by means of addition formulae, but that introduces singularities into the solution. Thus, we numerically solve the ODE in the form of eqn.~\ref{eqn:ode}.}. This is done in an IPython notebook \citep{PER-GRA:2007} available at \url{https://github.com/hamogu/RecollimationXrayCTTS/blob/master/scripts/jet_recol_shocks.ipynb}.
+where $m_{\textrm{H}}$ the mass of the hydrogen atom, $k$ the Boltzmann constant and $\mu=0.7$ is the mean particle mass for a highly ionized plasma. For general $P(z)$ the ODE needs to be solved numerically\footnote{It is possible to remove all trigonometric functions from eqn.~\ref{eqn:ode} by means of addition formulae, but that introduces singularities into the solution. Thus, we numerically solve the ODE in the form of eqn.~\ref{eqn:ode}.}. This is done in an IPython notebook \citep{PER-GRA:2007}. All code is available at \url{https://github.com/hamogu/RecollimationXrayCTTS/}.
