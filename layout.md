@@ -22,7 +22,6 @@ figures/omega_0/omega_0.png
 Results.tex
 figures/result/result.png
 figures/fracxray/fracxray.png
-/jet_recol_shocks.ipynb
 figures/rhocool/rhocool.png
 fitDGTau.tex
 figures/DGTaufit/DGTaufit.png
