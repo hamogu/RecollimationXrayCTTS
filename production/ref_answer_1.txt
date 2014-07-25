@@ -1,0 +1,517 @@
+We thank the referee for a thorough and timely report on our manuscript
+entitled "Recollimation Boundary Layers as X-ray Sources in Young Stellar
+Jets". We have taken all the referee's suggestions into account when we revised
+our work. 
+
+
+
+We have significantly expanded the article and reorganized several sections. In
+particular we expanded the introduction to add a more thorough review of the
+observational properties of jets from young stellar objects and to discuss
+previous models in the literature in more detail to highlight where this work
+contributes new results. We have also added a numerical fit of our
+model to the X-ray spectrum of DG Tau and show fit results. We hope that this
+makes it clear that our model is really "compatible" with the observed data.
+While the numerical values we discuss are geared specifically to DG Tau, we
+believe that our model might have a much broader relevance, but for stars other
+than DG Tau this is a purely theoretical investigation because we are lacking
+the required observations. In our opinion, this is still a worthwhile
+proposition to discuss, and we have tried to separate this more clearly from
+the discussion of DG Tau, which is based on direct observational data.
+Last, we have changed numerous wordings and grammatical structures in an
+attempt to make the article better understandable as suggested by the referee.
+
+
+Unfortunately, that makes is not very practical to highlight all passages of
+the article that have changed in bold font. If required, we can supply such a
+version, but essentially the entire sections 1,4, 5, and 6  and large parts of
+section 3 would appear bold.
+
+
+
+
+
+Specific response to points raised by the referee
+-------------------------------------------------
+(in different order then in the original report)
+
+>>> -I first suggest to specify what is new with respect to previous models and 
+>>> the reason why it is needed to use a different approach with respect to 
+>>> previous models to improve the impact of the paper [References to previous
+>>> models have been added only briefly in the second version of the 
+>>> manuscript uploaded]
+
+
+>>> "confirm or rule-out the scenario we suggest in this article": again, a 
+>>> comparison with previous models should be added to stress what is new in 
+>>> the present manuscript and why it is necessary to propose a different 
+>>> approach to handle the same topic
+
+
+We have reorganized the introduction of our manuscript and added a new
+subsection where we review previous models in the literature and we point out
+where our work expands on other models or supplements a previous analysis. We
+hope that this clarifies the purpose of our calculations:
+
+Our goal in this article is to see how well a recollimation shock of the
+stellar wind can explain the X-ray observations from CTTs, specifically DG
+Tau. Other models in the literature explain the X-rays by other mechanisms,
+but they may not be the only possible explanation. It is important to study
+every promising scenario in some detail to decide if it is compatible with
+observations or not. In this work, we want to decide if a recollimation shock
+is one possible model.
+
+Additional references or remarks connecting our work to previously published
+scenarios have been added at different points in the manuscript.
+
+>>> - The authors do not take into account the role of the magnetic field in 
+>>> their model. Cabrit et al. 2007 show that the magnetic field is necessary 
+>>> to collimate jets as pressure of the ambient is not enough; Kohler et al. 
+>>> 2012 discuss that even if their model does not take into account the 
+>>> magnetic field, it should be considered and explain how their model can be 
+>>> used to improve MHD simulations or complete future models with the magnetic
+>>> field as also made in their subsequent paper Kohler et
+>>> al. 2012b. Therefore, the authors should properly explain why the magnetic 
+>>> field has been neglected in this case and discuss if it is actually 
+>>> negligible
+
+>>> - The model presented by the authors is an application of Kohler et al. 
+>>> 2012 model. Note that Kohler et al. 2012b also extend their results for the
+>>> MHD case (see also previous comment)
+
+>>> "due to the shape of boundary": collimation not due to ambient but a 
+>>> magnetic field is required (Cabrit et al. 2007)
+
+>>> "the influence of the magnetic field probably dominates": so why it is 
+>>> justified the approach without the magnetic field taken into account? It 
+>>> should be explained if it is negligible or why it is neglected (see also 
+>>> Kohler et al. 2012b and Cabrit et al. 2007)
+
+>>> "can confine...": Cabrit et al. 2007 shows that the magnetic field is 
+>>> needed to collimate jets, no collimation is possible just with pressure
+
+
+There are two very different regions where the magnetic field might play a role
+in our model: As an outer boundary condition and in the stellar wind.
+
+As an outer boundary for the stellar wind, we prescribe some external pressure
+profile P(z). For our work it is unimportant which force provides this outer
+boundary condition. We realize that the last version of the manuscript may have
+caused the impression that this P(z) should be a thermodynamic pressure but in
+fact any pressure is fine for our model. The external pressure might just as
+well be supplied by an external magnetic field or by some combination of a
+magnetic field and a thermodynamic pressure. We have added this statement to
+the article. 
+The article by Cabrit et al (2007) mentioned by the referee looks at some gas
+flow and estimates an external pressure. The authors conclude that in their
+case the external gas pressure is too low to explain the jet collimation. This
+is an interesting result. However, Cabrit et al look at a different regime than
+we discuss here. First, their PdBI observations deal with the jet about
+500-1000 AU from the central source, which is at least an order of magnitude
+larger than the size of the recollimation shock that we discuss in our
+manuscript; second, they observe in molecular lines. If the jet still has an
+onion like structure with several layers at those large scales (which might not
+be the case) then the molecular gas should be an outer layer.
+We describe a much smaller component, that is collimated by an outer layer of
+optically emitting gas, which in turn is collimated by an outer layer of
+molecular gas which (according to Cabrit at al) is collimated by a
+magnetic field. 
+Nevertheless, the results of Cabrit et al. serve as an interesting example how
+the collimating force can actually be constrained.
+
+The second region where we need to discuss magnetic fields is the stellar wind
+that is INSIDE of the shock front. Here indeed we would have to treat magnetic
+fields explicitly if they are important for the dynamics. Unfortunately, we
+cannot follow the example of Koehler et al (2012b) in this case. In that
+article the authors rely on asymptotic magnetic dominance and look for
+self-similar solutions at large radii. In contrast, we analyze a shock front
+that bends back towards the axis of symmetry within a few tens of AU. 
+
+A simple numerical estimate (added to the paper) indicates that the ram
+pressure in this region is higher than the magnetic pressure and thus it
+dominates the dynamics, analogous to the situation in the solar wind, where the
+pressure of the solar wind opens some of the field lines. 
+While we agree that it would be very interesting to study the influence of a
+magnetic field, the complex topologies generally observed in CTTS (see papers
+by Donati et al and reconstruction by Jardine et al) are beyond what can be
+done in the semi-analytical treatment that we present here. 
+
+
+>>>- The work is focused on properties derived only for one object (DG Tau) and
+>>> using the Kompaneets approximation (relaxed in the analogous paper Kohler 
+>>> et al. 2012 which show that this approximation affects the morphology). 
+>>> Therefore, the strength of the results could be improved if a more general
+>>> discussion valid for other objects and in other approximations is added
+
+>>> "best studied case": in the manuscript the fact that this object should be 
+>>> the best case is just stated and the reason why it should be considered the
+>>> best case is never explained. It seems like the reason should be the fact 
+>>> that there are multiple observations with Chandra, but this is true also 
+>>> for other jets for which multi-epoch and multi-lambda observations are 
+>>> available.
+>>> Please explain why DG Tau should be considered the best case or remove this
+>>> sentence and in the rest of the paper
+
+DG Tau is the best case for such a study for two reasons:
+1) There are more X-ray observations than for any other X-ray jet from a young 
+   stellar object. DG Tau was observed in 2004, 2005, 2006 and 2010 by Chandra
+   and in 2004 and 2012 by XMM-Newton. The next best case is probably HH 154 
+   with three Chandra and two XMM-Newton observations, but that source of HH
+   154 is a binary, making the interpretation more complicated. All other YSO
+   jet are observed only once or twice in X-rays.
+2) In DG Tau we have the fortunate situation that the central star is absorbed,
+   such that only the hard X-rays escape. Thus, we know for sure that the soft 
+   X-rays seen close the central star must come from the inner jet. In all
+   other cases the central region is either absorbed so that star AND jet are
+   hidden (e.g. HH 2) or BOTH are visible (e.g. HD 163296) and since the star
+   is much brighter than the inner jet, we cannot separate stellar soft
+   component and inner jet emission.
+
+In our extended and reorganized introduction we added a few sentences to
+explain this. 
+We believe that DG Tau really is a proto-type for X-ray emission from jets and
+that all that we deduce in the article is equally applicable to jets from other
+CTTS and HAeBes and most likely class I sources, too. It is just these
+fortunate observational circumstances that make DG Tau special. Indeed, there
+are indications for an equally stationary component in HH 154 and HD 163296; it
+is not necessarily the jet physics, just the geometry of the absorption, that
+makes is harder to analyze a stationary X-ray component in those sources, too.
+
+Thus, while the observational evidence for stationary components in sources
+other than DG Tau is weak, there also is no observational evidence to the
+contrary. We see the X-ray spectrum at 30 AU from DG Tau. Should we not expect
+that other CTTS have similar properties, even if we cannot observe them? We
+realize that this is speculative, but if DG Tau is powered by a stellar wind
+shock, there is no reason to believe that stellar wind shock might not occur in
+other sources, too. 
+We have extended the discussion on this point significantly and we hope that is
+now addresses the referee's concerns.
+
+
+>>> It seems that the proposed scenario fits better for C IV than for X-rays.
+>>> Therefore, maybe the structure and also the title of the manuscript could 
+>>> be changed properly.
+
+If even the stellar wind is too slow to explain the X-ray observations, then the
+disk wind is certainly also too slow. In other word, if a recollimation shock
+cannot explain the X-rays, then we need to invoke some other non-local
+(scattering) or non-thermal (magnetic heating) model. It is the goal of this
+article to see how far we can get with the recollimation model and to explain
+the highest energies observed.
+ 
+Although we did not give X-ray luminosities explicitly in the last version of
+our manuscript we knew from a comparison with our work in Guenther et al (2009)
+that the velocities and the mass flux of our fiducial model will produce a
+significant amount of X-rays. The figures of the mass-fraction-per-bin
+vs. T_postshock can be misleading in this regard - for mass losses of the order
+10^-8 M_sun/yr only a very small fraction of the gas needs to be heated to 1.2
+or 2 MK to emit enough X-rays (see Guenther et al 2009). We have added a new
+section 4.3 that deals with this point.
+
+
+
+>>> "luminosity and temperature": add values or range of values
+
+The luminosity changes by about 1.6 (Schneider et al., in prep), the 25% we
+quoted are for the temperature and we have now added the range of observed
+temperatures to the sentence.
+
+>>> "stationary nature...remained unexplained": different explanations have
+>>> been proposed in the literature; please check and discuss previous models
+>>> on the same topic
+
+We wrote "remains unexplained in this scenario" with the intended meaning
+"unexplained in the scenario of paper~I". We have changed
+the wording of the paragraph to make it more obvious that we do not claim that
+stationarity is unexplained in the literature (there are several scenarios by
+different authors, some of which were pointed out by the referee), but just
+that it is not explained in paper I.
+
+>>> "we explain": a discussion on previous explanations should be added as well
+>>>  as an explanation of the reason why in this case (proper just for DG Tau? 
+>>> Valid also for other jets?) it is necessary to consider a different approach
+
+In our restructured introduction we have added an entire subsection dedicated
+to discuss previous models in the literature, their advantages and
+disadvantages and how our analysis supplements and expands on those previous
+models. 
+
+
+>>> "strong shock": only stated here, but not explained why this approximation
+>>> is valid in this case
+
+We have added a new section that justifies the main assumption made in the
+model (magnetic fields, sound speed, initial wind temperature).
+
+
+>>> "Matsakos...in apparent contrast to Kompaneet's approximation": also 
+>>> Kohler et al. 2012 relax this approximation; explain why this is not made 
+>>> in this case or explore also this scenario
+
+Kompaneet's approximation is clearly violated at large distances from the jet
+axis since the pressure beyond the outer edge of the disk falls of the the
+values of the star forming cloud. In our model, we deal with much smaller
+scales - scales so small that they all fall within the innermost resolution
+element of the Matsakos et al simulations. We have use the word "apparent
+contrast" here to highlight that this contrast is only "apparent" - the
+simulations do not tell us if the approximation is violated at the relevant
+scales. 
+
+We have rewritten this paragraph to address the referee's concerns.
+
+>>> "so narrow...resolution elements": how much narrow with respect to the 
+>>> resolution?
+
+We replaced this with "smaller than ... for the fiducial parameters". If we
+vary the parameters we can also obtain solutions with a much larger radius, but
+we know that those are excluded by observations anyway since we do not see an
+hole filled with stellar wind within the disk wind.
+
+>>> "typical densities...1.e6 cm-3": Podio et al. 2006 find lower values for 
+>>> the jet densities, these are very high
+
+Our model deals with the innermost component of the jet up to 50 AU from the
+central star. In contrast, Podio et al. measure the density several 100 AU from
+the central source. Even for well collimated jets with small opening angles we
+expect lower densities at such large distances.
+We have added a discussion of these points in section 1.1.
+
+
+>>> "60 AU": should it be 40 AU as in Fig. 3?
+
+The figure is zoomed in to show the shape of shock front for smaller mass loss
+rates. The maximal extend of the high mass-loss model is at 60 AU, although this
+happens outside the figure (we mention this number in the text, because the
+reader cannot see that him/herself in the figure).
+
+
+>>> "Fortunately": is this result expected? Please explain if it is expected 
+>>> or not
+
+For small radii the ram pressure is high, so we expect a large dw/dz and it is
+not surprising that we find this in the result. What we wanted to express using
+the word "Fortunately" is that the choice of omega_0 has only a small influence
+on the overall shape of the solution, which removes the need to do a detailed
+parameter study for different omega_0. We have deleted the word "Fortunately"
+from the sentence.
+
+
+>>> "fiducial model": it should be described better the reason why the
+>>> "fiducial" model is the best case
+
+In this context, we use the term "fiducial" in the sense that this is our
+"standard" or "default" model and we vary one parameter at the time from the
+values of these models. The parameter values are chosen form what we expect to
+find given the discussion in section 3 (e.g. the speed is taken to be just a
+little higher than the highest observed speeds in the optical component where
+we can measure them by Doppler shift). The "fiducial" model is not necessarily
+the model that provides the best fit (and we show later that a model with
+e.g. a higher velocity describes the X-ray spectrum from DG Tau better).
+
+
+>>> "temperatures...sufficient...power the observed X-ray...": in Fig. 6 T is 
+>>> lower than 2 MK, a value lower than observed in X-ray emitting jets
+
+>>> "> 1 MK": but always < 2 MK which is lower than values typically derived 
+>>> from the observations; just saying "< 1MK" is misleading and this is not 
+>>> consistent with most X-ray emitting jets
+
+
+We think there are three arguments why it is still worthwhile to explore this
+temperature range:
+
+1) The fiducial values are chosen as a "best-guess" of parameters based on
+measurements of the optical velocity etc. We should explore what X-ray gas we
+expect in  this case.
+
+2) Soft X-rays are absorbed more than hard X-rays. If the astrophysical
+source has a distribution of temperatures and some absorption, a fit with one
+temperature component (which is the preferred method in the literature given
+the low count numbers for stellar jets) tends to pick out a high
+temperature. So, it is not surprising that the average temperature in our model
+is lower than the fitted temperatures in the literature.
+
+3) Very different temperatures are observed in different jets. In DG Tau (arguably
+the best comparison for the model with discuss here) the temperature is a
+little higher: Gudel 05,08 say 3.4 MK, but Guenther et al 09 show that there
+is a strong degeneracy in the parameters space with the absorption and values
+between 0.2-0.4 keV = 2-4 MK should be considered. 
+
+In other objects, lower temperatures are routinely found:
+- HH2: kT = 0.06-0.11 keV (around 1 MK) - Pravdo et al 2001 or Schneider et al
+2012
+- HH 80/81: 0.13+-0.05 keV (=1.5 MK) - Pravdo et al 2004
+- Z CMa: 0.2 keV = 2 MK - Stelzer et al 2009
+- RY Tau: 0.1-0.2 keV - see discussion in Skinner et al. 2011
+
+Notice that HH 154 is significantly hotter close to the launching source: 0.6
+keV = 6 MK (Schneider et al 2011 analyze the temperature vs. the distance from
+the source).
+
+We have argued above that most likely the emission seen in these other sources
+is due to a different process, e.g. a termination shock or slower material in
+the jet catching up with faster one as in the simulations of Bonito. Yet, some
+fraction of the cool material could also be due to a wind shock because the
+wind shock and the first Herbig-Haro knot might blend together at the spatial
+resolution of Chandra. The fact that we can reproduce those temperatures means
+that this scenario is at least possible.
+
+
+>>> "cannot be resolved": HST can resolve shocks in Halpha and [SII] with 
+>>> resolution comparable to numerical models for near YSO jets; does the 
+>>>authors mean in X-rays? Please clarify as this is not the case in general
+
+HST is a spectacular instrument for resolving stellar jets and current IR
+instruments with AO on the VLT or Gemini also reach fantastic resolutions of the
+order 0.1". Yet, that is still insufficient to resolve the recollimation
+shocks we predict here, although new observations are getting very close to
+this limit and we are exited that this may provide a new test to verify or
+falsify our model in the future.
+
+The distance to the closest stellar jets (incl DG Tau) is about 140 pc. At that
+distance 0.1" provides a resolution of 14 AU. The maximal radius of our
+fiducial model is about 5 AU, the diameter is therefore 10 AU, comparable to
+the resolution limit.
+However, the contrast between a slightline that passes though the jet axis
+(this slightline passes: disk wind - stellar wind - disk wind) and a slightline
+that passes at omega = 5 AU (this sightline passes only through disk wind) is
+expected to be small, because the layer of the disk wind (which is common to
+both slightlines) is much thicker than the inner few AU of stellar wind.
+
+Together with the fact that the current resolution limit is still larger
+than the expected stellar wind zone in the center of the jet this means that we
+cannot expect to resolve the inner hole in the disk wind that is created by a
+small stellar wind zone such as predicted in our model.
+
+We have added a footnote to give a short version of this argument in the paper.
+
+
+
+>>> "stationary...consistent": consistent if the same time scale, temperature, 
+>>> and luminosity are derived, but LX is not derived and T is lower than 
+>>> observed
+
+>>> "shocks are major heating agents": [ ...]  3) if the comparison 
+>>> with the observations is the aim, the authors should derive parameters to 
+>>> be compared with the observations (T, L, size, location,...)
+
+>>> Second sentence: T are lower than observed, the position and the radial 
+>>> extension of the shock front are in good agreement with DG Tau but are not 
+>>> the proper for all the other X-ray emitting jets. A detailed comparison 
+>>> with previous models and scenarios proposed to state the differences and 
+>>> strength of the results presented should be added
+
+Paper I explores the mass flux that would be required to explain the X-ray
+emission with a shock. In the first version of our manuscript we tuned our
+fiducial parameters to match those mass fluxes.
+("Thus, it is fully consistent that our model predicts a mass loss fraction
+larger than 10^−3 of the stellar wind at X-ray emitting temperatures."), so we
+know from paper I that this reproduces the correct L_X. However, L_X is easy to
+estimate from our solutions to the ODE, so we now give this number explicitly.
+
+We have gone even one step further and added a new section 4.5 where we perform
+a numerical fit, that reproduces the observed Chandra spectrum from DG Tau and
+the observed distance between the star and the soft emission at the same
+time. The resulting fit is statistically acceptable and we added best-fit
+values to table 1 and show a figure with the fitted spectrum. Given the
+limitations of our model, especially the uncertainty in the external pressure
+profile, other parameter values might also provide a good description of the
+data (if a different pressure profile is chosen). In that sense the fit results
+do not provide a unique description of DG Tau. However, they certainly show
+that the model we suggest is compatible with the observed data.
+
+
+
+
+>>> "0.5 MK": maybe this approach fits better for lower T than X-rays
+
+>>> "CIV...": it seems that this scenario fits better CIV than X-rays (page 17)
+>>> , why is here just CIV discussed and before just X-rays? Maybe the 
+>>> structure and also the title of the manuscript should be changed properly.
+
+The fitted model reproduces the X-ray spectra. As the referee suspected, the
+best-fit value for the wind velocity is quite a bit higher than our fiducial
+value (which is estimated based on the highest velocities observed at in proper
+motion and red-shift in the optical and FUV), but they are compatible with the
+speed of the fast solar wind. As stated above, our goal in this article is to
+explain the hottest emission. Of course, we hope our model predicts the C IV
+emission at the same time, but the simulation of a full position-velocity
+diagram is beyond the scope of this semi-analytical work.
+
+>>> "shocks are major heating agents": 1) if the main conclusion is that the 
+>>> X-ray emission originates from shocks, there are several previous models 
+>>> on this topic based on quantitative methods; 2) if the authors want to 
+>>> explain the stationary shock in an alternative way than previous models, 
+>>> these should be properly discussed [but they were totally missing in the
+>>>  first version of the manuscript and only a brief sentence has been added 
+>>> in the second version of the manuscript uploaded])
+
+>>> "Our work is complementary to the simulations... several hundred AU from 
+>>> the central star - about an order of magnitude further along the jet than 
+>>> the scenario we discuss here": actually this is not the case of HH 154 
+>>> which shows X-ray emission located at the base of the central source as 
+>>> well as DG Tau and in the literature mechanisms generating X-ray emission 
+>>> located at the base of the jet has been investigated in details. The method
+>>>  presented in this manuscript is valid only for one object as the other 
+>>> jets show X-ray emission located also at greater distances.
+
+
+>>> "very close": actually the approach developed in this manuscript is 
+>>> strongly tuned on only one object, as all the other X-ray emitting jets 
+>>> discovered so far show X-ray emission located at the base of the jet up 
+>>> to greater distances with respect to the central engine or very distant 
+>>> from the YSO from which they originate. Also in the radial direction, 
+>>> other jets have been resolved with higher radial extension.
+
+We have significantly expanded the introduction and the discussion section to
+address these points. We discuss previous publications in more details now,
+including those papers pointed out by the referee. 
+We set out to test how well a recollimation shock can explain the observed
+features of jets in general. We pick the example of DG Tau, which we consider
+the best case for such a study (see above), but we have added significant
+discussion about the applicability to other sources. In short, we can resolve
+the X-ray spectrum of the component we need only in DG Tau. This does neither
+prove nor disprove the existence of recollimation shocks as X-ray sources in
+other jets, it is only a testimony to our limited observational
+possibilities. We regard it as likely, that DG Tau is not a special case and
+that other source might show similar phenomena, which (for different reasons)
+are unobservable. However, the current data also allows the interpretation that
+DG Tau is fundamentally different in some way from all other known young stars.
+
+We believe that our work is complementary to other proposed models in the sense
+that in this article we just explore one possibility to explain the X-ray
+generation. The fact that our model is compatible with the observations does
+not prove that it is right; other scenarios could also be compatible with the
+observations. 
+Some alternative scenarios have been discussed in detail (e.g. a
+time-variable ejection speed in several papers by Raga et al and Bonito et
+al.), while for others only a first-order estimate of the plausibility has been
+published (e.g. Bally et al 03 estimate rough numbers for a scenario where the
+resolved stellar X-ray emission is in fact scattered stellar emission, but
+those estimates could be refined with numerical modeling). 
+In this article, we simply explore one possible scenario that has not received
+much attention in the literature before and we hope that in future articles (by
+us or other groups) other scenarios will be studied to the same level of detail.
+
+
+
+>>> This figure is the same as in Kohler et al. 2012, therefore I suggest to 
+>>> remove it in the manuscript and just refer to the original one. Furthermore,
+>>> the analogous figure in Kohler et al. 2012 is described in more details 
+>>> and the authors should refer to that description
+
+We have added a statements that refer the reader to the excellent work of
+Koehler et al for more details both in the text and in the figure
+caption. However, we think that a figure like this is critical for the reader
+to follow the definition of the coordinate system and the
+angles. Unfortunately, very few readers from the star formation community will
+be familiar with the work of Koehler and al. and will remember how the
+coordinate system and alpha, theta etc. are defined there. Thus, we have a
+preference to keep this figure with a prominent statement that more details can
+be found in the Koehler et al. article.
+However, if the referee strongly disagrees then we will follow his/her advice
+and remove the figure.
+
+
+
+
