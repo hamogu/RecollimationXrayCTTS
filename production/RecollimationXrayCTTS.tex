@@ -1,6 +1,8 @@
-%\documentclass[10pt,flushrt,preprint]{aastex}
+%% This is emulateapj reformatting of the AASTEX sample document
+%%
+\documentclass{emulateapj}
 
-\documentclass[manuscript]{aastex}
+\usepackage{natbib}
 
 \usepackage{graphicx}
 \usepackage[space]{grffile}
@@ -12,35 +14,14 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=false,pdfborder={0 0 0},}
 
-\usepackage{natbib}
+\newcommand{\vdag}{(v)^\dagger}
 
 \newcommand{\truncateit}[1]{\truncate{0.8\textwidth}{#1}}
 \newcommand{\scititle}[1]{\title[\truncateit{#1}]{#1}}
 
 
-%% preprint2 produces a double-column, single-spaced document:
-
-%% \documentclass[preprint2]{aastex}
-
-%% Sometimes a paper's abstract is too long to fit on the
-%% title page in preprint2 mode. When that is the case,
-%% use the longabstract style option.
-
-%% \documentclass[preprint2,longabstract]{aastex}
-
-%% If you want to create your own macros, you can do so
-%% using \newcommand. Your macros should appear before
-%% the \begin{document} command.
-%%
-%% If you are submitting to a journal that translates manuscripts
-%% into SGML, you need to follow certain guidelines when preparing
-%% your macros. See the AASTeX v5.x Author Guide
-%% for information.
-
-
 %% You can insert a short comment on the title page using the command below.
-
-\slugcomment{To appear in The Astrophysical Journal (ApJ)}
+%\slugcomment{To appear in The Astrophysical Journal (ApJ)}
 
 %% If you wish, you may supply running head information, although
 %% this information may be modified by the editorial offices.
@@ -63,6 +44,7 @@
 
 \title{Recollimation boundary layers as X-ray sources in young stellar jets}
 
+
 %% Use \author, \affil, and the \and command to format
 %% author and affiliation information.
 %% Note that \email has replaced the old \authoremail command
@@ -70,60 +52,141 @@
 %% anywhere in the paper, not just in the front matter.
 %% As in the title, use \\ to force line breaks.
 
-\author{Hans Moritz G{\"{u}}nther\affil{Harvard-Smithsonian Center for Astrophysics} Zhi-Yun Li\affil{Affiliation not available} Christian\affil{Affiliation not available}}
+\author{Hans Moritz G{\"{u}}nther}
+\affil{Harvard-Smithsonian Center for Astrophysics}
+ 
+\author{Zhi-Yun Li}
+\affil{Affiliation not available}
+ 
+\author{Christian}
+\affil{Affiliation not available}
+
+
+%% Notice that each of these authors has alternate affiliations, which
+%% are identified by the \altaffilmark after each name.  Specify alternate
+%% affiliation information with \altaffiltext, with one command per each
+%% affiliation.
+
+%\altaffiltext{1}{Visiting Astronomer, Cerro Tololo Inter-American Observatory.
+%CTIO is operated by AURA, Inc.\ under contract to the National Science
+%Foundation.}
+%\altaffiltext{2}{Society of Fellows, Harvard University.}
+%\altaffiltext{3}{present address: Center for Astrophysics,
+%    60 Garden Street, Cambridge, MA 02138}
+%\altaffiltext{4}{Visiting Programmer, Space Telescope Science Institute}
+%\altaffiltext{5}{Patron, Alonso's Bar and Grill}
+
+%% Mark off your abstract in the ``abstract'' environment. In the manuscript
+%% style, abstract will output a Received/Accepted line after the
+%% title and affiliation information. No date will appear since the author
+%% does not have this information. The dates will be filled in by the
+%% editorial office after submission.
 
 \begin{abstract}
-Emission from jets from pre-main-sequence stars is mostly observed in
-the optical and IR wavelength range. However, in several cases X-ray and
-UV observations reveal a weak but highly energetic component in those
-jets. If this component is heated in shocks then the required velocities
-are of the order 300-500~km~s$^{-1}$ for standing shocks and higher for
-moving shock fronts. In this article we show semi-analytically that a
-recollimation boundary layer between a fast stellar wind and a slower,
-more massive disk wind can have the right properties to explain the
-observed X-ray emission, provided that the stellar wind mass loss rate
-is about $10^{-8}$~M$_{\odot}$~yr$^{-1}$ (for a spherically symmetric
-stellar wind). Our calculations support a wind-wind interaction scenario
-for the high energy emission near the base of YSO jets.
+Young stars accrete mass fomr circumstellar disks. In many cases, the
+accretions coincides with a phase of massive outflows, which can be
+highly collimated. Those jets from pre-main-sequence stars emit
+predominantly in the optical and IR wavelength range. However, in
+several cases X-ray and UV observations reveal a weak but highly
+energetic component in those jets. X-rays are observed both from
+stationary regions close to the star and from knots in the jet several
+hundred AU from the star. In this article we show semi-analytically that
+a fast, stellar wind which is recollimated by the pressure from a
+slower, more massive disk wind can have the right properties to power
+stationary X-ray emission. The size of the shock regions is compatible
+with the observational constraints. Our calculations support a wind-wind
+interaction scenario for the high energy emission near the base of YSO
+jets. For the specific case of DG~Tau, a stellar wind with a mass loss
+rate of $5\cdot10^{-10}\;M_{\odot}\mathrm{ yr}^{-1}$ and a wind speed of
+800~km~s$^{-1}$ reproduces the observed X-ray spectrum. We conclude that
+stellar wind recollimation shocks are one possible scenario to power
+stationary X-ray emission close to the jet launching point.
 
 \end{abstract}
 
 
 
 
+\bibliographystyle{apj}
+
 %% Keywords should appear after the \end{abstract} command. The uncommented
 %% example has been keyed in ApJ style. See the instructions to authors
 %% for the journal to which you are submitting your paper to determine
 %% what keyword punctuation is appropriate.
 
-%\keywords{globular clusters: general --- globular clusters: individual(NGC 6397, NGC 6624, NGC 7078, Terzan 8}
+%% Authors who wish to have the most important objects in their paper
+%% linked in the electronic edition to a data center may do so in the
+%% subject header.  Objects should be in the appropriate "individual"
+%% headers (e.g. quasars: individual, stars: individual, etc.) with the
+%% additional provision that the total number of headers, including each
+%% individual object, not exceed six.  The \objectname{} macro, and its
+%% alias \object{}, is used to mark each object.  The macro takes the object
+%% name as its primary argument.  This name will appear in the paper
+%% and serve as the link's anchor in the electronic edition if the name
+%% is recognized by the data centers.  The macro also takes an optional
+%% argument in parentheses in cases where the data center identification
+%% differs from what is to be printed in the paper.
 
-\bibliographystyle{apj.bst}
+%\keywords{globular clusters: general --- globular clusters: individual(\objectname{NGC 6397},
+%\object{NGC 6624}, \objectname[M 15]{NGC 7078},
+%\object[Cl 1938-341]{Terzan 8})}
+
+%% From the front matter, we move on to the body of the paper.
+%% In the first two sections, notice the use of the natbib \citep
+%% and \citet commands to identify citations.  The citations are
+%% tied to the reference list via symbolic KEYs. The KEY corresponds
+%% to the KEY in the \bibitem in the reference list below. We have
+%% chosen the first three characters of the first author's name plus
+%% the last two numeral of the year of publication as our KEY for
+%% each reference.
 
 
 \section{Introduction} 
-In many areas of astrophysics compact central objects accrete mass and angular momentum from a disk and at the same time they eject a highly collimated jet. This is seen for central objects as massive as AGN or as light as (proto) brown dwarfs. For objects like AGN or accreting neutron stars the jets reach relativistic energies while the velocities are significantly lower in young stellar systems. 
+In many areas of astrophysics compact central objects accrete mass and angular momentum from a disk and at the same time they eject a highly collimated jet. This is seen for central objects as massive as AGN or as light as (proto) brown dwarfs. Jets from AGN or accreting neutron stars reach relativistic energies while the velocities are significantly lower in young stellar objects (YSOs). 
+A large number of jets is observed in near star forming regions, where the jet composition and structure can be studied in great detail \citep[see the review by][]{2014arXiv1402.3553F}.
+Jet launching starts in the early stages of star formation and continues until the accretion from the circumstellar disk cedes. Jets from very young stars are the most powerful and can sometimes be traced to a parsec from the source. In these systems, the central engine is still deeply embedded in a dense envelope of gas and dust and thus cannot be observed directly. As YSOs evolve, the envelope becomes thinner. Actively accreting low-mass stars in this stage are called classical T Tauri stars \citep[for a review see][]{2013AN....334...67G}. Their jets often only reach a few hundred AU (and are thus sometimes called ``microjets'' in comparison to the outflows from younger objects).
+It seems reasonable to suspect that the same physics governs the launching from any type of young star and that the same processes occur close to the launch site, but observationally the inner few tens of AU are only accessible in CTTS, where we can study the initial properties before a jet interacts with the ambient medium. 
 
-Young, low-mass stars that actively accrete from a circum-stellar disk are called classical T Tauri stars \citep[for a review see][]{2013AN....334...67G}. The slowest velocities are observed in molecular lines with typical line shifts of only a few km~s$^{-1}$ \citep{2008ApJ...676..472B}. These molecular outflows have wide opening angles around 90$^{\circ}$ \citep[e.g.][]{2013A&A...557A.110S,2014A&A...564A..11A} and are presumably launched from the disk. Faster components are seen in H$\alpha$ or in optical forbidden emission lines such as [\ion{O}{1}] or [\ion{S}{2}]. \citet{2000ApJ...537L..49B} observed the jet from the CTTS \object{DG Tau} with seven long-slit exposures of \emph{HST}/STIS to resolve the kinematic structure of the jet both along and perpendicular to the jet axis. They find that the faster jet components are better collimated and propose an ``onion''-like scenario, where the fastest jet components make up the innermost layer and the surrounding layers have progressively lower velocities away from the jet axis. The fastest velocities seen in optical emission lines are typically 200-300~km~s$^{-1}$ \citep{2004Ap&SS.292..651B,2008ApJ...689.1112C,2013A&A...550L...1S}.
+Recently, there has been increasing evidence that jets from CTTS have a stationary hot (in the MK range), X-ray emitting region only a few tens of AU from the central star (Section~\ref{sect:introxray}). In this article we want to establish recollimation boundary layers between the stellar wind and a disk wind as one possible scenario to explain stationary X-ray and UV emission from YSO jets.
+While X-ray emission has been discussed in the literature (Section~\ref{sect:intromodel}), stationary recollimation shocks have not been investigated in detail. 
 
-Yet, in some jets from CTTS there is evidence for another, more energetic, component. The best studied case is DG~Tau that was the target of several shorter \emph{Chandra} exposures in 2004, 2005, and 2006 and a large program in 2010 \citep{2005ApJ...626L..53G,2008A&A...478..797G,2011ASPC..448..617G}. These observations showed X-ray emission from three distinct regions: First, weak and soft emission from the jet is resolved several hundred AU from the star itself. Second, hard emission from the central star is observed with stellar flares as seen on many other young and active stars. Since the star itself is embedded in circumstellar material, the stellar soft X-ray emission is expected to be completely absorbed. However, soft X-rays very close to the star are observed; they are emitted in a region about 30-40~AU above the plane of the accretion disk. The centroid of the spatial distribution of soft X-rays is consistent with a position on the jet axis 30-40~AU from the star, but the uncertainties on the position would also allow an off-axis emission region \citep{2008A&A...488L..13S}. The luminosity and temperature of this inner emission region are remarkably stable over one decade. The maximum change observed is about 25\,\% \citep{SchneiderDGTauXray}.
+X-rays trace the fastest and most energetic components of jets. They can also influence the chemistry deep in the disk \citep[e.g.][]{2010ApJ...714.1511H,2012ApJ...756..157G} and thus alter the environment of planet formation because they penetrate deeper than UV and optical radiation. Unlike stellar X-ray emission, the radiation from the jet originates above the plane of the disk and thus reaches the entire disk surface, while stellar radiation may be shadowed by the inner disk rim.
 
-DG~Tau is the best observed case, but a similar scenario probably applies to other jet launching young stars, e.g.\ \object{HH 154} also shows an inner, stationary X-ray component and additional emission in the knots \citep{2010A&A...511A..42B,2011A&A...530A.123S}.
-In the more massive Herbig Ae/Be star \object{HD 163296} there are indications that the X-ray emission is extended in the direction of the jet by a few dozen AU, too \citep{2005ApJ...628..811S,2013A&A...552A.142G}.
+In the remainder of the introduction we review observational properties of jets from CTTS and summarize theoretical explanations for this emission in the literature. In section~\ref{sect:model} we develop the equations that govern a standing shock front and discuss the physical parameters in section~\ref{sect:parameters}. In section~\ref{sect:results} we present our results and discuss implications in section~\ref{sect:discussion}. We summarize this work in section~\ref{sect:summary}.
 
-In \citet{2009A&A...493..579G} (from now on ``paper I'') we showed that this inner X-ray emission can be explained by shock heating of a jet component moving with 400-500~km~s$^{-1}$. For the case of DG~Tau the mass flux in this component is less than $10^{-3}$ of the total mass flux in the jet or even lower if the same material is reheated in several consecutive shocks. If the density in the fast outflow is $>10^5$~cm$^{-3}$ then the cooling length of this shock is only a few AU and in the optical it would be unresolved and outshined by the more luminous emission from the more massive, but slower jet component. However, the stationary nature of the X-ray emission remained unexplained in this scenario.
+\subsection{Observational properties of jets from young stars}
 
-In this article we explain how such a shock can be caused by the recollimation of the inner jet due to the shape of the boundary between stellar winds and disk winds similar to the work of \citet{2012MNRAS.422.2282K} for relativistic jets. This scenario naturally explains the stationary appearance and its location within the jet collimation region. 
+Outflows from CTTS consist of several layers with different flow velocities, densities, temperatures, chemical compositions and different launching positions. Conceptually, these can be thought of as conical shells, stacked into each other like the layers an onion \citep{2000ApJ...537L..49B}. Observationally, it is not clear if there is a smooth transition between those layers or if they are separated by discontinuities. 
 
+The slowest velocities are observed in molecular lines with typical line shifts of only a few km~s$^{-1}$ \citep{2008ApJ...676..472B}. These molecular outflows have wide opening angles around 90$^{\circ}$ \citep[e.g.][]{2013A&A...557A.110S,2014A&A...564A..11A} and are presumably launched from the disk. Faster components are seen in H$\alpha$ or in optical forbidden emission lines such as [\ion{O}{1}] or [\ion{S}{2}]. \citet{2000ApJ...537L..49B} observed the jet from the CTTS \object{DG Tau} with seven long-slit exposures of \emph{HST}/STIS to resolve the kinematic structure of the jet both along and perpendicular to the jet axis. They find that the inner, most collimated jet component moves fastest and surrounding layers have progressively lower velocities away from the jet axis. The fastest velocities seen in optical emission lines are typically 200-300~km~s$^{-1}$ \citep{2004Ap&SS.292..651B,2008ApJ...689.1112C,2013A&A...550L...1S}.
 
+At some distance from the star, shock fronts, the so called Herbig-Haro (HH) objects, are observed when the jet runs into the ambient medium or when material emitted at higher velocities catches up with previously emitted slower material. \citet{2006A&A...456..189P} studied emission line ratios in jets in the Orion and Vela star forming regions. In their sample the knots are typically a few hundred AU from the central star. They find electron densities around $n_e \approx 50-300 \textrm{\;cm}^{-3}$ when looking at optical emission lines, slightly higher values for forbidden emission lines like [\ion{Fe}{2}] and $n_e \approx 5\times10^5-5\times10^6 \textrm{\;cm}^{-3}$ from Ca lines. The ionization fraction in HH objects is low, so the actual particle number density is one to two orders of magnitude higher. \citet{2004ApJ...609..261H} observed the CTTS \object{HN Tau} and resolved the jet at only 30~AU, much closer to the star. They find densities around $n_e=10^6-10^7\textrm{\;cm}^{-3}$ from [\ion{Fe}{2}] lines. This shows that the inner layers of jets can have densities significantly above those of the interstellar medium.
 
-In section~\ref{sect:model} we develop the equations that govern the shock front and discuss the physical parameters in section~\ref{sect:parameters}. In section~\ref{sect:results} we present our results and discuss implications in section~\ref{sect:discussion}. We summarize this work in section~\ref{sect:summary}.
+\subsection{X-ray emission from stellar jets}
+\label{sect:introxray}
+In some jets there is evidence for another, hotter and faster component. X-rays were first seen in the jet \object{HH 2} \citep{2001Natur.413..708P,2012A&A...542A.123S}, where the central star is invisible. Later, X-ray emission was also discovered from less enbedded CTTS, \object{RY Tau} \citep{2014ApJ...788..101S} and, most notably, \object{DG Tau}. DG~Tau is the best case to study X-ray emission from the jet close to the star for two reasons: (i)~No other jet driving young stellar object has been observed as often in X-rays. DG~Tau was the target of several shorter \emph{Chandra} exposures in 2004, 2005, and 2006 and a large program in 2010 \citep{2005ApJ...626L..53G,2008A&A...478..797G,2011ASPC..448..617G} and has been observed with \emph{XMM-Newton} in 2004 \citep{2007A&A...468..353G} and in 2012 \citep{SchneiderDGTauXray}. (ii)~DG~Tau itself is hidden behind a column density of $N_{\textrm{H}}=2\times10^{22}\textrm{ cm}^{-3}$ \citep{2008A&A...478..797G}, which absorbs any soft X-ray emission from the central star. Hard, coronal emission pierces through the gas and allows us to pinpoint the stellar position to high accuracy, while the soft X-rays observed close to the stellar position must come from the jet.
+
+We can distinguish three different regions of X-ray emission in DG~Tau: First, weak and soft emission from the jet is resolved several hundred AU from the star itself. Second, hard emission from the central star is observed with stellar flares as seen on many other young and active stars. Third, soft X-rays are emitted in a region about 30-40~AU above the plane of the accretion disk. The centroid of the spatial distribution of soft X-rays is consistent with a position on the jet axis 30-40~AU from the star \citep{2008A&A...488L..13S,2011ASPC..448..617G}. The temperature of this inner emission region is remarkably stable over one decade between 3 and 4~MK, the maximum change observed is about 25\,\%. The change in luminosity is 1.6 in the same time range ($L_X=1-2\times10^{30}\textrm{ erg s}^{-1}$) \citep{SchneiderDGTauXray}.
+
+There is no reason to believe that the DG~Tau system represents exceptional conditions for jet launching. While the inclination and absorption are less favorable to observe X-ray emission very close to the star for other CTTS systems, there are indications that \object{HH 154} also shows an inner, stationary X-ray component and additional emission in the knots \citep{2010A&A...511A..42B,2011A&A...530A.123S} and that the X-ray emission in the more massive Herbig Ae/Be star \object{HD 163296} is extended in the direction of the jet by a few dozen AU, too \citep{2005ApJ...628..811S,2009A&A...494.1041G,2013A&A...552A.142G}.
+
+In \citet{2009A&A...493..579G} we showed that the soft X-ray emission close to DG~Tau can be explained by shock heating of a jet component moving with 400-500~km~s$^{-1}$. The mass flux in this component is less than $10^{-3}$ of the total mass flux in the jet or even lower if the same material is reheated in several consecutive shocks. If the density in the fast outflow is $>10^5$~cm$^{-3}$ then the cooling length of this shock is only a few AU and would be invisible in current optical and IR observations, since it would be surrounded and outshone by the more luminous emission from the more massive, but slower jet component. However, the stationary nature of the X-ray emission remained unexplained in that article.
+
+\subsection{Models for high-energy emission from stellar jets}
+\label{sect:intromodel}
+When \citet{2001Natur.413..708P} discovered X-ray emission in HH~2, they immediately discussed strong shocks in the outflow as the most likely heating process and the most obvious way to generate a strong shock is a bow shock at the head of the outflow, where the jet encounters circumstellar material. Depending on the density contrast between the jet and the ambient material, the heating can occur in either the forward shock that is driven into the ISM or in the reverse shock that travels against the flow in the jet. However, in most YSO jets, we see the X-ray emission fairly close to the source, where the ISM has been cleared by outflow activity a long time ago. \citet{2003ApJ...584..843B} study the X-ray emission from \object{L1551 IRS 5}, a binary protostar. They suggest several classes of models. First, the observed X-rays might be stellar emission, that is scattered into our line-of-sight by circumstellar material. This requires high densities to reach the required scattering efficiency and the material must be neutral, otherwise it would show up as bright radio emission, which is not seen coincident with the X-ray detection in YSO jets. Second, a time variable launching velocity would cause shocks to propagate along the jet, continuously heating the jet material they encounter. This scenario is confirmed for an optical knot in the jet of HD~163296 \citep{2013A&A...552A.142G}, but the velocity differences are too small to heat the jet to X-ray emitting temperatures. Third, fast shocks form when the jet encounters an obstacle. In the absence of dense ISM this could be a collimation shock, the disk, or the outflow of another star. Jets are typically ejected roughly perpendicular to the disk \citep[e.g.][for IRS 5]{2002A&A...382..573F}, making an interaction with the disk surface unlikely. The interaction with the outflow of a second YSO on scales of a few hundred AU only works in binary systems, such as IRS~5, but X-rays are also detected from stars that are apparently single, such as DG~Tau and RY~Tau. A forth possibility is magnetic heating from the reconnection either between two interacting outflows \citep{2008A&A...478..453M} or from fields that are frozen into the outflow \citep{2013A&A...550L...1S}.
+
+In this article, we will analytically explore how a recollimation shock can explain stationary X-ray emission from jets. Based on the observational evidence for multi-layered jets, we assume that the innermost component of the flow is a stellar wind, which is collimated by the disk wind. Collimation shocks of this kind have not been treated in detail in the literature, while X-ray emission due to a moving shocks has been studied by several authors \citep[see, e.g.\ the analytical work and numerical simulations by][]{2002ApJ...576L.149R,2007A&A...462..645B,2010A&A...517A..68B}.
+
+\citet{2011ApJ...737...54B} numerically simulated stationary X-ray shocks. To do so, they impose a rigid nozzle with a radius of a few hundred AU and inject a flow of plasma with a flat velocity profile along the jet axis. They find that a diamond-shaped shock forms at a height roughly twice the radius of the nozzle with temperatures high enough to explain the X-ray emission from HH~154. In contrast to that work, we do not impose rigid boundaries that collimate the flow, but instead prescribe an external pressure profile and then calculate the position of the boundary between the inner wind and the external medium. The setup of \citet{2011ApJ...737...54B} is well-suited to study regions at large distance from the star, but in this article we concentrate on the inner region, where the outflow is not yet parallel to the jet axis and stellar and disk outflows have different velocities. Thus, we start with a spherical flow from the stellar surface and explain how a shock can be caused by the recollimation of the stellar outflow due to pressure from the outer disk winds. We use a model similar to work on relativistic jets by \citet{2012MNRAS.422.2282K}.
 
 \section{The model}
-\label{sect:model}
+
 In this section we develop an analytical steady-state model for the interface between the stellar wind and the surrounding disk wind. The pressure of the disk wind collimates the stellar wind into a jet (see figure~\ref{fig:sketch} for a sketch). The two flows are separated by a contact discontinuity, whose exact position is given by pressure equilibrium between the outer, disk wind component and the inner, stellar wind component. As the stellar wind encounters the contact discontinuity, the velocity component perpendicular to the discontinuity is shocked. Thus, our model needs to distinguish three zones: (i) the cold pre-shock stellar wind, (ii) the hot post-shock stellar wind, and (iii) the disk wind. Our goal is to calculate the geometrical shape of the stellar wind shock, since this determines the velocity jump across the shock front and the temperature of the post-shock plasma. 
 
-The Rankine-Hugoniot jump conditions relate the mass density $\rho$, velocity $v$, and pressure $P$ on both sides of a shock. For ideal gases and non-oblique shocks the conservation of mass, momentum and energy across the shock can be written as follows \citep[][chap.~7]{1967pswh.book.....Z}, where the state before the front of the shock front is marked by the index 0, that behind the shock by index 1:
+\subsection{The shape of the shock front}
+\label{sect:model}
+The Rankine-Hugoniot jump conditions relate the mass density $\rho$, velocity $v$, and pressure $P$ on both sides of a shock. For ideal gases and non-oblique shocks the conservation of mass, momentum and energy across the shock can be written as follows \citep[][chap.~7]{1967pswh.book.....Z}, where the state before the shock front is marked by the index 0, that behind the shock by index 1:
 \begin{eqnarray}
 \rho_0 v_0 & = & \rho_1 v_1 \label{eqn:RH1}\\
 \label{eqn:RH2}P_0+\rho_0 v_0^2 & = & P_1+\rho_1 v_1^2\\
@@ -131,10 +194,12 @@ The Rankine-Hugoniot jump conditions relate the mass density $\rho$, velocity $v
 \end{eqnarray}
 
 We assume that the stellar wind before the shock front is relatively cool and thus the thermodynamic pressure can be neglected, setting $P_0=0$.
-The shock front settles at a position where the pressure of the stellar wind equals the post-shock pressure and the contact discontinuity adjusts to equalize the the post-shock pressure and the confining external pressure of the disk wind $P(z)$. 
+The shock front settles at a position where the pressure of the stellar wind equals the post-shock pressure and the contact discontinuity adjusts to equalize the post-shock pressure and the confining external pressure of the disk wind $P(z)$. 
 
 In our case we are dealing with an oblique shock (Figure~\ref{fig:sketch}). Equations~\ref{eqn:RH1} to \ref{eqn:RH3} stay valid if only the velocity component perpendicular to the shock front is taken as $v_0$. 
-Figure~\ref{fig:sketch} shows the geometry of the problem. We use a cylindrical coordinate system $(z, \omega, \theta)$ with an origin on the central star. We place the $z$-axis along the jet outflow direction and assume rotational symmetry around the jet axis. Thus, the flow can effectively be written in $(z,\omega)$. We use the symbol $r$ to denote the spherical radius, i.e.\ the distance of any point to the star at the origin of the coordinate system.
+
+We use a cylindrical coordinate system $(z, \omega, \theta)$ with an origin at the central star. We place the $z$-axis along the jet outflow direction and assume rotational symmetry around the jet axis. Thus, the flow can effectively be written in $(z,\omega)$. The symbol $r$ denotes the spherical radius, i.e.\ the distance of any point to the star at the origin of the coordinate system. 
+\citet{2012MNRAS.422.2282K} employ the same geometry in a relativistic calculation and we refer to their discussion and their figure~1 for a more detailed description.
 
 We treat the disk wind as an outer boundary condition with a given pressure profile and concentrate on the description of the stellar wind. To simplify the equations we adopt Kompaneets' approximation \citep{1960SPhD....5...46K} which states that there is no axial pressure gradient so that the pressure profile of the disk wind extends through all layers of the outflow:
 \begin{equation}
@@ -150,7 +215,7 @@ With this we can write:
 \begin{center}
 \includegraphics[width=0.35\columnwidth]{figures/sketch/sketch.png}
 \caption{\label{fig:sketch}
-Geometry in the $(z, \omega)$ plane. The $z$-axis is oriented along the jet, the $\omega$-axis in the plane of the circumstellar accretion disk. The innermost outflow layer is the unshocked stellar wind. The shock front is located at $R_{\rm{shock}}(z)$. The next layer is the hot, post-shock stellar wind, which is separated from the disk wind by the contact discontinuity at $R_{\rm{contdisc}}(z)$.}
+Geometry in the $(z, \omega)$ plane. The $z$-axis is oriented along the jet, the $\omega$-axis in the plane of the circumstellar accretion disk. The innermost outflow layer is the unshocked stellar wind. The shock front is located at $R_{\rm{shock}}(z)$. The next layer is the hot, post-shock stellar wind, which is separated from the disk wind by the contact discontinuity at $R_{\rm{contdisc}}(z)$. The same geometry is employed in the paper by \citet{2012MNRAS.422.2282K} and we refer to that publication for a more detailed version of this figure.}
 \end{center}
 \end{figure}
 
@@ -168,11 +233,11 @@ with
 \begin{equation}\label{eqn:angle}
 \psi+\alpha =  \theta \ .
 \end{equation}
-Again, Figure~\ref{fig:sketch} shows how two of the angles in this equation can be calculated, so that $\psi$ can be determined. First,
+Again, Figure~\ref{fig:sketch} shows
 \begin{equation}\label{eqn:theta}
-\tan\theta = \frac{\omega}{z}\ ;
+\tan\theta = \frac{\omega}{z}
 \end{equation}
-second, the angle $\alpha$ is given by the derivative of the position of the shock front:
+and the angle $\alpha$ is given by the derivative of the position of the shock front:
 \begin{equation}\label{eqn:deriv}
 \frac{\rm{d}\omega}{\rm{d}z} = \frac{\sin \alpha}{\cos \alpha} = \tan{\alpha}
 \end{equation}
@@ -192,88 +257,115 @@ with
 \begin{equation}\label{eqn:r0}
 R_0(z) = \sqrt{\frac{\dot{M} v_{\infty}}{4\pi P(z)}},
 \end{equation}
-where $R_0(z)$ is the maximal cylindrical radius of the shock front. In the case of young stars the circum-stellar disk constrains the stellar wind which cannot expand beyond the inner hole in the accretion disk at $z=0$ (Section~\ref{sect:omega0}.
+where $R_0(z)$ is the maximal cylindrical radius of the shock front.
 
 The solution to the ODE determines the location of the shock front. This allows us to calculate the pre-shock velocity perpendicular to the shock front using eqn.~\ref{eqn:v0} and the post-shock temperature $T_{\mathrm{post-shock}}$. From eqn.~\ref{eqn:RH3} with negligible pre-shock pressure and $v_0=4\;v_1$ for a strong shock we derive:
 \begin{equation}
 T_{\mathrm{post-shock}}(z) = \frac{3}{16} \frac{\mu m_{\textrm{H}}}{k} v_0(z)^2,\label{eqn:T}
 \end{equation}
-where $m_{\textrm{H}}$ the mass of the hydrogen atom, $k$ the Boltzmann constant and $\mu=0.7$ is the mean particle mass for a highly ionized plasma. For general $P(z)$ the ODE needs to be solved numerically\footnote{It is possible to remove all trigonometric functions from eqn.~\ref{eqn:ode} by means of addition formulae, but that introduces singularities into the solution. Thus, we numerically solve the ODE in the form of eqn.~\ref{eqn:ode}.}. This is done in an IPython notebook \citep{PER-GRA:2007} available at \url{https://github.com/hamogu/RecollimationXrayCTTS/blob/master/scripts/jet_recol_shocks.ipynb}.
+where $m_{\textrm{H}}$ the mass of the hydrogen atom, $k$ the Boltzmann constant and $\mu=0.7$ is the mean particle mass for a highly ionized plasma. For general $P(z)$ the ODE needs to be solved numerically\footnote{It is possible to remove all trigonometric functions from eqn.~\ref{eqn:ode} by means of addition formulae, but that introduces singularities into the solution. Thus, we numerically solve the ODE in the form of eqn.~\ref{eqn:ode}.}. This is done in an IPython notebook \citep{PER-GRA:2007}. All code is available at \url{https://github.com/hamogu/RecollimationXrayCTTS/}.
 
+
+\subsection{Justification of model assumptions}
+\label{sect:modelassumptions}
+In this section we explain the assumptions made in the derivation of the equations above.
+
+\subsubsection{Sound speed}
+Observations of jets and winds from CTTS indicate that typical temperatures are a few thousand K (except in shocked regions) and typical densities are in the range $10^4-10^6 \mathrm{ cm}^{-3}$ in the optically visible component \citep[e.g.][]{2000A&A...356L..41L,2007ApJ...657..897K}. This might not be the same outflow component that our model describes, but it is the best observational estimate. With those numbers the sound speed $c_s$ is
+\begin{equation}
+c_s = \left(\gamma \frac{k T}{m_{\textrm{H}}\right)^{0.5} \approx 10 \textrm{ km s}^{-1} \; ,
+\end{equation}
+which is low enough that a strong shock forms even for small $\psi$.
+
+\subsubsection{Initial wind temperature}
+\label{sect:T_0}
+In Section~\ref{sect:model} we assume an initially cold stellar wind where the thermal pressure before the shock can be ignored. This is motivated by two arguments: (i) \citet{2007IAUS..243..299M} show that hot stellar winds will cool quickly and cause X-ray emission much brighter than observed if they have a mass loss rate above $10^{-11}M_\odot\mathrm{ yr}^{-1}$.  Mass loss rates well above this value are required to explain the resolved X-ray emission at 40~AU, thus the wind must be launched cold (see Section~\ref{sect:masslossrates}). (ii) The solar wind has 1~MK. It is unclear which physical process heats it to this temperature, but it is probably related to magnetic waves. In CTTS the wind mass loss rate is higher than in the Sun, and it seems unlikely that the same mechanism can provide enough energy to heat a CTTS wind to the same temperature.
+
+The approximation to neglect the initial wind temperature is valid to a few $10^5$~K for the densities and wind speeds considered here. Hotter winds cannot be described in our model, because their sound speed is so large that no strong shock develops for small angles $\psi$.
+
+\subsubsection{Magnetic fields}
+Two different regions need to be distinguished where magnetic fields can play a role. First, a magnetic field can provide additional pressure in the disk wind and thus contribute to the external pressure $P(z)$. Indeed, the region covered by our model is expected to be inside the Alv\`en surface of the disk wind, so $P(z)$ is probably magnetically dominated (further discussion and references in Section~\ref{sect:boundary}), but for our model only the total value of $P(z)$ matters, independent of the processes that contribute to the pressure. 
+
+Second, the stellar wind could be threaded by a stellar magnetic field. Fields on YSOs are often quite complex with a mixture of open and closed field lines \citep[e.g.][]{2011MNRAS.417..472D,2012MNRAS.425.2948D}.
+Qualitatively, closed field lines can either fill with coronal plasma or connect to the accretion disk and carry accretion funnels. Only those parts of the stellar surface connected to open field lines can launch a wind. Thus, the total mass loss rate would be reduced compared to a spherical wind. 
+As a simple estimate we calculate the magnetic pressure $P_{\textrm{mag}}=\frac{\boldsymbol{B}^2}{8 \pi}$ for a split monopole field with a field strength of 1~kG at $r=R_\odot$ and compare it to the ram presure (eqn.~\ref{eqn:Pofz}). Using the fiducial parameters from Table~\ref{tab:fiducial} the ram presure dominates over the magnetic pressure already at 0.1~AU and since $P_{\textrm{mag}} \propto \boldsymbol{B}^2 \propto r^{-4}$, while $P_{\textrm{ram}} \propto r^{-2}$ (eqn.~\ref{eqn:Pofz} and \ref{eqn:rho}) we can neglect the magnetic pressure of the stellar wind for our model.
+
+
+
+%Otherwise, the disk wind would also have to be very dense (probably too dense to be consistent with observations) to provide this pressure. Observationally, it is difficult to distinguish the stellar wind from the disk wind. The slower jet components observed further away from the jet axis carry much of the mass flow \citep{2000ApJ...537L..49B}. Their origin is probably the inner region of the disk and not the star \citep{2003ApJ...590L.107A}. Thus, it is fully consistent that our model predicts a mass loss fraction larger than  $10^{-3}$ of the stellar wind at X-ray emitting temperatures. If the disk wind dominates over the stellar wind in mass loss, then the fraction of hot gas in the (stellar plus inner disk) jet might still be small.
 
 \section{Constraints on parameters}
 \label{sect:parameters}
-In this section we discuss observational and theoretical constraints on boundary conditions and input values for the model, most notably $P(z)$, $\dot M$, $v_\infty$, and $\omega(z=0)$. Table~\ref{tab:fiducial} shows the values we adopt for our fiducial model. We vary the parameters individually to show how each of them affects the solution of the ODE. 
+In this section we discuss observational and theoretical constraints on boundary conditions and input values for the model, most notably $P(z)$, $\dot M$, $v_\infty$, and $\omega(z=0)$. Table~\ref{tab:fiducial} shows the values we adopt as most likely in the following discussion (fiducial model). We vary the parameters individually to show how each of them affects the solution of the ODE. 
 \begin{table}
 \label{tab:fiducial}
-\caption{Values for fidcial model}
-\begin{tabular}{cc}
+\caption{Values for fiducial model and fit to DG Tau}
+\begin{tabular}{ccc}
 \hline\hline
-parameter & value\\
+parameter & fiducial & fit to DG~Tau\\
 \hline
-$v_\infty$ & 600 km s$^{-1}$\\
-$\dot M$ & $10^{-8}\;M_\odot\textrm{yr}^{-1}$\\
-$\omega_0$ & 0.01 AU\\
-$P(z)$ & $P_\infty+P_0\exp\left(-\frac{z}{h}\right)$\\
-$P_\infty$ & $5\cdot 10^{-6}$ Ba\\
-$P_0$ & $5\cdot 10^{-4}$ Ba\\
-$h$ & 2 AU\\
+$v_\infty$ & 600 km s$^{-1}$ & $840\pm25$ km s$^{-1}$\\
+$\dot M$ & $10^{-8}\;M_\odot\textrm{yr}^{-1}$ & $(5\pm2)\cdot10^{-10}\;M_\odot\textrm{yr}^{-1}$\\
+$\omega_0$ & 0.01 AU & = 0.01 AU\tablenotemark{a}\\
+$P(z)$ & $P_\infty+P_0\exp\left(-\frac{z}{h}\right)$ & $=P_\infty+P_0\exp\left(-\frac{z}{h}\right)$\\
+$P_0$ & $5\cdot 10^{-4}$ Ba &  $(1.4\pm0.2)\cdot 10^{-5}$ Ba\\
+$P_\infty$ & $5\cdot 10^{-6}$ Ba & $=0.01\cdot P_0$\\
+$h$ & 2 AU & = 5 AU\tablenotemark{a}\\
 \hline
 \end{tabular}
+\tablenotetext{a}{fixed during fit}
 \end{table}
 
 \subsection{Disk winds as boundary conditions for stellar winds}
 \label{sect:boundary}
 Different models exist to explain wind launching from the stellar surface \citep{1988ApJ...332L..41K,2005ApJ...632L.135M}, the X-point close to the inner disk edge \citep{1994ApJ...429..781S} and magneto-centrifugal launching from the disk \citep{1982MNRAS.199..883B,2005ApJ...630..945A}. It is likely that more than one mechanism contributes to the total outflow from the system. In this case, we expect a contact discontinuity between the different components whose position is determined by the pressure on both sides. Specifically, hydromagnetic disk winds have a tendency to collimate and possibly even to recollimate to smaller flow radii under certain conditions \citep{1982MNRAS.199..883B,1992ApJ...394..117P}.
-Numerically, the magneto-centrifugally accelerated disk wind is probably the best explored component. Magneto-hydrodynamic (MHD) simulations of the disk wind have been performed in 2D \citep[e.g.][]{2005ApJ...630..945A}, 2.5D \citep[e.g.][]{2011ApJ...728L..11R} or 3D \citep[e.g.][]{2006ApJ...653L..33A}, but typically do not resolve the stellar wind, where the magneto-centrifugal launching is not effective. However, they show that the disk wind is collimated close to the axis and that the densities are largest in this region. Furthermore, the Alfv\'en surface (which separates the magnetically dominated region from the flow-dominated region) is located at many AU for the inner layers of the jet. This is in contrast with the outer, less collimated layers of the wind, which leave the magnetically dominated region at a few AUs.
+Numerically, the magneto-centrifugally accelerated disk wind is probably the best explored component. Magneto-hydrodynamic (MHD) simulations of the disk wind have been performed in 2D \citep[e.g.][]{2005ApJ...630..945A}, 2.5D \citep[e.g.][]{2011ApJ...728L..11R} or 3D \citep[e.g.][]{2006ApJ...653L..33A}, but typically do not resolve the stellar wind. However, they show that the disk wind is collimated close to the axis and that the densities are largest in this region. Furthermore, the Alfv\'en surface (which separates the magnetically dominated region from the flow-dominated region) is located at many AU for the inner layers of the jet. This is in contrast with the outer, less collimated layers of the wind, which leave the magnetically dominated region at a few AUs.
 
-\citet{2009A&A...502..217M} present analytical and numerical solutions for several scenarios that mix an inner stellar wind and an outer disk wind. In contrast to our approach, they impose a smooth transition between stellar wind and disk wind, which allows them to model the entire outflow region numerically. With some time variability in the wind launching their models produce promising knot features in the jet. In the context of our analysis, we note that the pressure in their models is magnetically dominated and much higher close to the jet axis than at larger radii in apparent contrast to Kompaneet's approximation. However, the inner jet component, that we discuss here, is so narrow that it only feels the pressure in the innermost resolution elements. The pressure at the jet axis is high in the plane of the disk and drops by one to two orders of magnitude until it reaches a plateau at $P_\infty$. Below we use a simple exponential $P(z)=P_\infty+P_0\exp\left(-\frac{z}{h}\right)$ to mimic this profile.
+\citet{2009A&A...502..217M} present analytical and numerical solutions for several scenarios that mix an inner stellar wind and an outer disk wind \citep[this model has been extended in ][]{2012A&A...545A..53M,2014A&A...562A.117T}. In contrast to our approach, they impose a smooth transition between stellar wind and disk wind and they start their simulation at $z=50$~AU instead of at the star. With some time variability in the wind launching their models produce promising knot features in the jet. In the context of our analysis, we note that the pressure in their models is magnetically dominated and that Kompaneet's approximation does not hold in the disk wind, but that the presure gradient is small on scales of a few AU. Also, the inner jet component discussed here is smaller than the innermost resolution elements for the fiducial parameters. The pressure at the jet axis is high in the plane of the disk and drops by one to two orders of magnitude until it reaches a plateau at $P_\infty$. Below we use an exponential $P(z)=P_\infty+P_0\exp\left(-\frac{z}{h}\right)$ to mimic this profile.
 Similar profiles for the inner density and pressure are seen in simulations by other groups \citep[e.g.][]{2005ApJ...630..945A,Li_Krasnopolsky_Blandford_2006,2008ApJ...678.1109M}.
 
-Observations of jets and winds from CTTS indicate that typical temperatures are a few thousand K and typical densities are in the range $10^4-10^6 \mathrm{ cm}^{-3}$ in the optically visible component \citep[e.g.][]{2000A&A...356L..41L,2007ApJ...657..897K}. This might not be the same outflow component that our model describes, but it is the best available observational estimate, so we chose the parameters of $P(z)$ to reach post-shock densities similar to these values.
+Figure~\ref{fig:p_ext} shows how different pressure profiles influence the shock position. Larger pressures force the shock front onto the symmetry axes for smaller $z$ (top row). If the pressure is constant in the region where the shock front hits the symmetry axis, then the angle between the shock front and the jet axis is large, which causes high post-shock temperatures (solid red line in top row). On the other hand, if there is a pressure gradient when the shock front bends towards the jet axis, then the shock front and the stream lines form a smaller angle and the post-shock temperatures are lower (dotted black line in the top row).
 
-Figure~\ref{fig:p_ext} shows how different pressure profiles influence the shock position. Larger pressures force the shock front onto the symmetry axes for smaller $z$ (top row). If the pressure is constant in the region where the shock front hits the symmetry axis, then the angle between the shock front and the jet axis is large, which causes high post-shock temperatures (solid red line in the upper row). In contrast, if there is a pressure gradient when the shock front bends towards the jet axis, then the shock front and the stream lines form a smaller angle and pre-shock speeds and thus the post-shock temperatures are lower (dotted black line in the top row).
-
-The solutions shown in the bottom row of the figure are for the same pressure scale heights as those in the upper row, but here we use smaller $P_0$ for scenarios with large scale heights $h$, so that the shock front reaches the jet axis at approximately the same $z$. Close to the disk plane the pre-shock speeds differ significantly, but at large $z$ they reach very similar values. However, the scenarios with the smaller $P_0$ values reach larger radii and the slightly different shape of the shock front leads to more plasma at high temperatures.
+The solutions shown in the bottom row of the figure are for the same pressure scale heights $h$ as those in the upper row, but here we use smaller $P_0$ for scenarios with large $h$, so that the shock front reaches the jet axis at approximately the same $z$. Close to the disk plane the pre-shock speeds differ significantly, but at large $z$ they reach very similar values. The scenarios with smaller $P_0$ reach larger radii and the slightly different shape of the shock front leads to more plasma at high temperatures.
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=1\columnwidth]{figures/P_ext/P_ext.png}
 \caption{\label{fig:p_ext}
-Solutions to the ODE for different exponential pressure profiles. In the top row the scale height $h$ of the exponential is varied with all other parameters held fixed; the bottom row uses the same values for $h$, but also scales $P_0\propto h^{-1.5}$.
-The four panels show imporant variables for each solution. 
+Solutions to the ODE for different pressure profiles. In the top row the scale height $h$ varies whie all other parameters are fixed; the bottom row uses the same values for $h$, but also scales $P_0\propto h^{-1.5}$.
 \emph{leftmost panel}: Profile of the external pressure $P(z)$. 
-\emph{middle left panel}: Position of the shock front. Note that the two axes in this panel are to scale. The unshocked stellar wind region is much longer in $z$ direction (height above the disk) than it is wide. 
+\emph{middle left panel}: Position of the shock front. Note that the two axes in this panel use the same scale. The unshocked stellar wind region is much longer in $z$ direction (height above the disk) than it is wide. 
 \emph{middle right panel}: Pre-shock velocity $v_0$ measured perperdicular to the shock front. 
-\emph{rightmost panel}: Distribution of post-shock temperatures, weighted by spherically integrated mass flux. This distribution is dominated by the temperature (which in turn is set by $v_0$) at small values of $z$, since the shock surface is close to the central object and covers a large solid angle of the stellar wind and therefore a large fraction of the total mass flux. Note that this panel does not show an emission measure distribution of all observed plasma; it only shows which fraction of the mass is heated to what temperature in the shock. It does not account for the fact that this plasma will eventually cool and contribute emission at cooler temperatures; a simulation of the thermodynamics of the cooling plasma is beyond the scope of this article.}
+\emph{rightmost panel}: Distribution of post-shock temperatures, weighted by spherically integrated mass flux. This distribution is dominated by the temperature (which in turn is set by $v_0$) at small values of $z$, since the shock surface is close to the central object and covers a large solid angle of the stellar wind and therefore a large fraction of the total mass flux. Note that the histograms show the temperature directly behind the shock front and does not account for the fact that all plasma will eventually cool and contribute emission at cooler temperatures; a simulation of the thermodynamics of the cooling plasma is beyond the scope of this article.}
 \end{center}
 \end{figure}
 
 \subsection{Mass-loss rates}
+\label{sect:masslossrates}
 The measured mass loss rates in the outflows from CTTS vary widely between objects.  Even for a single object, very different mass loss rates can be found, depending on the spectral tracers chosen and on the assumptions used to calculate mass loss rates from line fluxes. The filling factor that describes the fraction of the observed volume occupied by hot gas is especially uncertain because the innermost jet component is generally not resolved.
 
-Typical mass loss rates found in the literature for CTTS outflows are in the range $10^{-10}-10^{-6}M_{\odot}\textrm{ yr}^{-1}$ \citep{1999A&A...342..717B,2006A&A...456..189P}. For example, \citet{2006ApJ...646..319E} measure values down to $10^{-10}$~M$_{\odot}$~yr$^{-1}$ for some CTTS, but only upper limits for weak-line T Tauri stars (or WTTS). In the specific case of DG~Tau \citet{1997A&A...327..671L} calculate the  mass loss rate as $6.5\cdot 10^{-6}$~M$_{\odot}$~yr$^{-1}$; \citet{1995ApJ...452..736H}
+Typical mass loss rates found in the literature for CTTS outflows are in the range $10^{-10}-10^{-6}M_{\odot}\textrm{ yr}^{-1}$ \citep{1999A&A...342..717B,2006A&A...456..189P}. \citet{2006ApJ...646..319E} measure values down to $10^{-10}$~M$_{\odot}$~yr$^{-1}$ for some CTTS, but only upper limits for weak-line T Tauri stars (WTTS). In the specific case of DG~Tau \citet{1997A&A...327..671L} calculate the  mass loss rate as $6.5\cdot 10^{-6}$~M$_{\odot}$~yr$^{-1}$; \citet{1995ApJ...452..736H}
 obtain $3\cdot 10^{-7}$~M$_{\odot}$~yr$^{-1}$ and, further out in the jet, \citet{2000A&A...356L..41L} find $1.4\cdot 10^{-8}$~M$_{\odot}$~yr$^{-1}$. Those measurements for the optical jet are probably dominated by the disk wind \citep[e.g.][]{2014arXiv1404.0728W} and unlikely to track the stellar mass loss correctly.
-Paper~I shows that a mass loss below $10^{-10}$~M$_{\odot}$~yr$^{-1}$ is sufficient to explain the X-ray emission from the jet as shock heating.
-We use $10^{-8}$~M$_{\odot}$~yr$^{-1}$ as fiducial stellar mass loss in the remainder of the article. This is only a fraction to the total mass loss of the system and the disk wind, though slower, operates over a much larger area dominates the system's mass loss in our scenario.
+\citet{2009A&A...493..579G} shows that a mass loss below $10^{-10}$~M$_{\odot}$~yr$^{-1}$ is sufficient to explain the X-ray emission from the jet as shock heating.
+We use $10^{-8}$~M$_{\odot}$~yr$^{-1}$ as fiducial stellar mass loss in the remainder of the article. This is only a fraction to the total mass loss of the system because the disk wind, though slower, operates over a much larger area and dominates the system's mass loss.
 
-Figure~\ref{fig:dot_m} shows how a larger mass loss rate and therefore a higher density and ram pressure in the stellar wind pushes the shock front out to larger radii and heights. The different shape of the shock front also influences the post-shock temperatures. In the high mass loss rate scenario (black dotted line) the shock front reaches its maximum radius at 60~AU and most of the spherically symmetric wind passes the shock front at shallow angles, so this scenario has the highest fraction of low temperature material.
+Figure~\ref{fig:dot_m} shows how a larger mass loss rate and therefore a higher density and ram pressure in the stellar wind pushes the shock front out to larger radii. The different shape of the shock front also influences the post-shock temperatures. In the high mass loss rate scenario (blue dash-dotted line) the shock front reaches its maximum radius at 60~AU and most of the spherically symmetric wind passes the shock front at shallow angles, so this scenario has the highest fraction of low temperature material.
 
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=1\columnwidth]{figures/dot_m/dot_m.png}
 \caption{\label{fig:dot_m}
-Solutions to the ODE for different mass loss rates. For a description of the individual panels see Fig.~\ref{fig:p_ext}. The middle left panel only shows the region close to the star for clarity. The shock front with the largest mass loss rate extends to $\omega=40$~AU and comes back to the axis of symmetry at 130~AU.}
+Solutions to the ODE for different mass loss rates. For a description of the individual panels see Fig.~\ref{fig:p_ext}. The middle left panel only shows the region close to the star for clarity. The shock front with the largest mass loss rate extends to $\omega=50$~AU at $z=60$~AU and comes back to the axis of symmetry at 130~AU.}
 \end{center}
 \end{figure}
 
 \subsection{Wind speed}
-The launching mechanism of the stellar wind in CTTS is uncertain. \citet{2007IAUS..243..299M} show that stellar winds from CTTS cannot have a total mass loss above $10^{-11}M_\odot\mathrm{ yr}^{-1}$ if they are launched hot. Otherwise, the high densities required to reach such a mass loss would lead to a runaway cooling. 
-This would probably hinder the wind  launching and should be also observable. Thus, the winds of CTTS are probably more complex than just a scaled up version of the solar wind. Still, the wind speeds observed in the sun provide a reasonable estimate for $v_\infty$. The solar wind consists of a slow wind with a typical velocity of 400~km~s$^{-1}$ and a fast wind around 750~km~s$^{-1}$ \citep{2005JGRA..110.7109F}. The relative contribution and the launching position of the two types changes over the solar cycle, but the slow wind often emerges from regions near the solar equator and fast wind is generally associated with coronal holes \citep{1999GeoRL..26.2901G,2003A&A...408.1165B,2009LRSP....6....3C}. Despite these differences, the total energy flux in the solar wind is almost independent of the latitude, because the slower wind is denser than the faster wind \citep{2012SoPh..279..197L}. In this article, we set $v_\infty=600$~km~s$^{-1}$ as the fiducial outflow velocity and we assume that the wind is accelerated close to the star and has reached $v_\infty$ before it interacts with the shock front. We use a spherically symmetric stellar wind with a constant velocity. For a solar-type wind this works well for deriving the shape of the shock front because eqn.~\ref{eqn:r0} depends only on the total energy flux $\rho v^2_\infty \propto \dot M v_\infty$ and not the velocity itself. 
+The launching mechanism of the stellar wind in CTTS is uncertain. \citet{2007IAUS..243..299M} show that stellar winds from CTTS cannot have a total mass loss above $10^{-11}M_\odot\mathrm{ yr}^{-1}$ if they are launched hot. 
+Thus, the winds of CTTS are probably more complex than just a scaled up version of the solar wind. Still, the wind speeds observed in the sun provide a reasonable estimate for $v_\infty$. The solar wind consists of a slow wind with a typical velocity of 400~km~s$^{-1}$ and a fast wind around 750~km~s$^{-1}$ \citep{2005JGRA..110.7109F}. The relative contribution and the launching position of the two types changes over the solar cycle, but the slow wind often emerges from regions near the solar equator and the fast wind is generally associated with coronal holes \citep{1999GeoRL..26.2901G,2003A&A...408.1165B,2009LRSP....6....3C}. Despite these differences, the total energy flux in the solar wind is almost independent of the latitude, because the slower wind is denser than the faster wind \citep{2012SoPh..279..197L}. We set $v_\infty=600$~km~s$^{-1}$ as the fiducial outflow velocity and we assume that the wind is accelerated close to the star and has reached $v_\infty$ before it interacts with the shock front. We use a spherically symmetric stellar wind with a constant velocity. For a solar-type wind this works well for deriving the shape of the shock front because eqn.~\ref{eqn:r0} depends only on the total energy flux $\rho v^2_\infty \propto \dot M v_\infty$ and not the velocity itself. 
 
-Figure~\ref{fig:v_infty} shows how a large $v_\infty$ and a correspondingly large ram pressure of the stellar wind push the shock front higher above the disk plane, similar to outflows with a larger $\dot M$. Additionally, $v_\infty$ is the single most important parameter that controls the maximal post-shock temperatures and the amount of hot plasma.
-The figure shows that high shock speeds and thus high post-shock velocities are reached close to the disk plane. Because this region covers a large solid angle, it is an important contributor to the total temperature distribution of the post-shock plasma (rightmost panel). However, the temperature in this region is probably overestimated by our model because the wind may not have reached $v_\infty$ this close to the star or the wind may not be spherically symmetric. A lower wind velocity and higher density at the equator would lead to lower post-shock temperatures with a higher emission measure close to the disk plane.
+Figure~\ref{fig:v_infty} shows how a large $v_\infty$ and a correspondingly large ram pressure push the shock front higher above the disk plane, similar to outflows with a larger $\dot M$. Additionally, $v_\infty$ is the most important parameter that controls the post-shock temperatures.
+The figure shows that high shock speeds and thus high post-shock temperatures are reached close to the disk plane. Because this region covers a large solid angle, it is an important contributor to the total temperature distribution of the post-shock plasma (rightmost panel). However, the temperature in this region is probably overestimated by our model because the wind may not have reached $v_\infty$ this close to the star or the wind may not be spherically symmetric. A lower wind velocity and higher density at the equator similar to the solar low-velocity wind would lead to lower post-shock temperatures with a higher emission measure close to the disk plane.
 
 
 \begin{figure}[h!]
@@ -286,9 +378,9 @@ Solutions to the ODE for different $v_\infty$. For a description of the individu
 
 \subsection{Starting point of integration}
 \label{sect:omega0}
-From a mathematical point of view, the starting point of the integration in the plane of the disk can be chosen freely anywhere between $\omega=0$ and $\omega=R_0(z=0)$. Figure~\ref{fig:omega_0} compares different starting points under otherwise equal conditions. For small initial radii the ram pressure of the stellar wind pushes the shock surface out to larger radii in a comparatively small $\Delta z$. This leads to small pre-shock speeds in this region because the direction of the flow and the shock surface are almost parallel. This region also represents a large fraction of the total mass loss of the stellar wind, because it covers a large angle in the $(z,\omega)$-plane and a large solid angle of the spherical wind emission. Consequently, models with small values for $\omega_0$ show much less material that is heated up to high temperatures. 
+From a mathematical point of view, the starting point of the integration in the plane of the disk can be chosen freely anywhere between $\omega=0$ and $\omega=R_0(z=0)$. Figure~\ref{fig:omega_0} compares different starting points under otherwise equal conditions. For small initial radii the ram pressure of the stellar wind pushes the shock surface out in a small $\Delta z$. This leads to small pre-shock speeds in this region because the direction of the flow and the shock surface are almost parallel. This region also represents a large fraction of the total mass loss of the stellar wind, because it covers a large solid angle. Consequently, models with small values of $\omega_0$ heat less material to high temperatures. 
 
-Physically, the position of the shock front is restricted by the position of the disk - the shock between the stellar wind and the disk material (in the disk itself or the disk wind) must occur within the inner hole of the disk. Fortunately, figure~\ref{fig:omega_0} shows that the two solutions for $\omega_0=0.01$~AU and $0.1$~AU are almost indistinguishable and the exact value for this parameter is not important as long as it is small. We use $\omega_0 = 0.01$~AU as the fiducial starting point for the integration.
+Physically, the position of the shock front is restricted by the position of the disk - the shock between the stellar wind and the disk material (in the disk itself or the disk wind) must occur within the inner hole of the disk. Figure~\ref{fig:omega_0} shows that the two solutions for $\omega_0=0.01$~AU and $0.1$~AU are almost indistinguishable and the exact value for this parameter is not important as long as $\omega < 0.5$~AU. We use $\omega_0 = 0.01$~AU as the fiducial starting point for the integration.
 
 \begin{figure}[h!]
 \begin{center}
@@ -298,32 +390,51 @@ Four solutions to the ODE for four different starting points $\omega(z=0)=\omega
 \end{center}
 \end{figure}
 
-\subsection{Initial wind temperature}
-\label{sect:T_0}
-In Section~\ref{sect:model} we developed our model for an initially cold stellar wind where the thermal presure before the shock can be ignored. This is motivated by two arguments: (i) \citet{2007IAUS..243..299M} show that hot stellar winds will cool quickly and cause X-ray emission much brighter than observed if they have a mass loss rate above $10^{-11}M_\odot\mathrm{ yr}^{-1}$. Since we need mass loss rates well above this value to explain the resolved X-ray emission at 40~AU, the wind must be launched cold. (ii) The solar wind has 1~MK. It is unclear which physical process heats it to this temperature, but it is probably related to magnetic waves. In CTTS the wind mass loss rate is higher than in the Sun, and it seems unlikly that the same mechanim can provide enough energy to heat a stellar CTTS wind to the same temperature.
-
-The approximation to neglect the initial wind temperature is valid to a few $10^5$~K for the densities and wind speeds considered here. Hotter winds cannot be described in our model, because their sound speed is so large that no strong shock develops for small angles $\psi$.
-
 \section{Results}
 \label{sect:results}
-The last section already showed that for all parameters consistent with the theoretical and observational constraints the stellar wind is enclosed in a finite region by a shock front. This shock front generally reaches a maximum cylindrical radius of only several AUs, but a much larger height above the accretion disk for external pressure profiles with high pressure in the plane of the disk and a large pressure gradient (fiducial model in Fig.~\ref{fig:result}). A shallower pressure profile leads to a stellar wind region that is wider.So far, no stellar wind zone is resolved within the more massive and wider disk wind in any CTTS imaging, limiting the maximal size of the stellar wind region to a few AU. Our calculations show that this scenario is compatible with the known properties of the stellar wind. The biggest uncertainty is probably the value of the external pressure. As discussed above, different simulations in the literature predict similar pressure profiles, but the normalization of the pressure depends to a large degree on the disk magnetic field, which is only poorly constrained. In our calculation, we have scaled the pressure such that the post-shock densities are compatible with observations of the jet and we find a fiducial model that is compatible with the X-ray emission from the jet that we set out to explain. However, the magnitude of the pressure is a free parameter in our model and if it could be determined more accurately, that will confirm or rule-out the scenario we suggest in this article.
 
-The highest post-shock temperatures are generally reached at the base of the jet when the stellar wind encounters the inner disk rim or at large $z$ when the shock front intersects the jet axis. Thus, the position of the hottest post-shock cooling plasma must be very close to the jet axis. In our fiducial model (Fig.~\ref{fig:result}, solid red line), the temperature is just sufficient to produce X-ray emission. Paper~I showed that in DG~Tau a small faction, about $10^{-3}$, of the total mass loss rate in the outflow is enough to power the observed X-ray emission at the base of the jet. Figure~\ref{fig:rhocool} shows the pre-shock number densities $n_0$ for the four models from Fig.~\ref{fig:result}. A detailed treatment of the post-shock region is beyond the scope of this paper, but an upper limit on the post-shock cooling length $d_{\mathrm{cool}}$ can be derived according to \citet{2002ApJ...576L.149R}:
+\subsection{Uncertainties}
+All input parameters discussed above can take a range of values. We argue that the starting point of the integration has to be within the inner disk and the exact value has only a small influence on the result. The wind velocity is closely related to the temperature of the observed plasma, the mass loss rate to the size of the region and the luminosity.
+
+The biggest uncertainty is the value of the external pressure. As discussed above, different simulations in the literature predict similar pressure profiles, but the normalization of the pressure depends to a large degree on the disk magnetic field, which is only poorly constrained. In our calculation, we have scaled the pressure such that the post-shock densities are compatible with observations of the jet.
+
+
+\subsection{Size of stellar wind zone}
+For all parameters consistent with the theoretical and observational constraints the stellar wind is enclosed in a finite region by a shock front. This shock front generally reaches a maximum cylindrical radius of a few AUs, and a much larger height above the accretion disk for external pressure profiles with high pressure in the plane of the disk and a large pressure gradient (fiducial model in Fig.~\ref{fig:result}). A shallower pressure profile leads to a stellar wind region that is wider. 
+
+\subsection{X-ray luminosities}
+\label{sect:LX}
+The post-shock plasma is less dense than the typical stellar corona and can thus be treated in the so-called coronal approximation, meaning that the plasma is optically thin and line ratios for prominent X-ray lines are in the low-density limit. We use the shock models of \citet{2007A&A...466.1111G} to predict the fraction of the total pre-shock kinetic energy that will be emitted in the X-ray range. We refer to that publication for details on the shock models. In summary, the models simulate radiative cooling of optically thin plasma in a two-fluid approximation, where electron and and ions are described with a Maxwellian velocity distribution, each with a different temperature. The ionization and recombinations rates are calculated explicitly, but even for densities as low as $10^5$~cm${-3}$ only a small fraction of the post-shock cooling zone is significantly different from the ionization equilibrium.
+
+\citet{2011AN....332..448G} published a grid of X-ray spectra\footnote{Available at http://hdl.handle.net/10904/10202} based on these models with pre-shock velocities between 300 and 1000~km~s$^{-1}$ in increments of 100~km~s$^{-1}$. We integrate all emission between 0.3 and 3~keV for each spectrum. At 300~km~s$^{-1}$ only 2\% of the available energy is emitted between 0.3 and 3~keV (Figure~\ref{fig:fracxray}), so we set the fraction to zero for pre-shock velocities of 0, 100 and 200~km~s$^{-1}$, which are not covered by the model grid. The fraction of energy emitted in X-rays is independent of the density except for a few density-sensitive emission lines with negligible contribution to the integrated flux. The physical size of the post-shock region depends strongly on the density, but total energy available only depends on the pre-shock velocity and the total mass flux. Thus, the X-ray luminosity $L_X$ does not change, if the post-shock region is compressed by some external pressure and the calculated values of $L_X$ are robust.
+
+The highest post-shock temperatures are generally reached at the base of the jet when the stellar wind encounters the inner disk rim or at large $z$ when the shock front intersects the jet axis. In our fiducial model (Fig.~\ref{fig:result}, solid red line), the pre-shock velocity is $>250$~km~s$^{-1}$ at $z<5$~AU and $z>20$~AU. Given the large solid angle covered by the inner disk rim, the  $z<5$~AU region contributes significantly to the total mass flux (compare the red line and the red filled histogram in Figure~\ref{fig:result}, rightmost panel). However, in most YSOs the central object is highly absorbed. Therefore, we calculate all $L_X$ values taking into account only regions with  $z>5$~AU. For the fiducial, the high $v_\inf$, the low $\dot M$, and the shallow $P$ model in Figure~\ref{fig:result} the predicted $L_X$ is $3\cdot10^{29}$, $5\cdot10^{30}$, $1\cdot10^{28}$, and $1\cdot10^{31}$~erg~s$^{-1}$, respectively.
+\citet{2009A&A...493..579G} already showed that in DG~Tau a small fraction, about $10^{-3}$, of the total mass loss rate in the outflow is enough to power the observed X-ray emission at the base of the jet. In our fiducial model, this small fraction corresponds to the mass flow close to the jet axis, where the pre-shock velocities are highest.
+
+\subsection{The size of the post-shock zone}
+Figure~\ref{fig:rhocool} shows the pre-shock number densities $n_0$ for the four models from Fig.~\ref{fig:result}. A detailed treatment of the post-shock region is beyond the scope of this paper, but an upper limit on the post-shock cooling length $d_{\mathrm{cool}}$ can be derived according to \citet{2002ApJ...576L.149R}:
 \begin{equation}
 d_{\mathrm{cool}} \approx 20.9 \mathrm{ AU}
     \left(\frac{10^5\mathrm{ cm}^{-3}}{n_0}\right)
     \left(\frac{v_{\mathrm{shock}}}{500\mathrm{ km s}^{-1}}\right)^{4.5}\ .
 \end{equation}
-The derivation for this formula assumes a cylindrical cooling flow. In contrast, in our model the external pressure will continue to compress the gas, as it starts cooling. Since denser gas emits more radiation and thus cools faster, $d_{\mathrm{cool}}$ is only an upper limit. With this in mind, figure~\ref{fig:rhocool} (lower panel) indicates that the cooling lengths for our fiducial model is consistent with the X-ray observations that do not resolve the wind shock \citep{2008A&A...488L..13S}. Since only a very small fraction of the stellar mass loss is heated to X-ray emitting temperatures (Fig.~\ref{fig:result}, rightmost panel) the low-mass loss scenario also does not provide enough X-ray luminosity to explain the observations (paper~I).
-Significantly higher pressures require unrealistically fast outflows to push the shock front out to 40~AU and lower pressures do not allow a mass flux high enough to power the X-ray luminosity.
+The derivation for this formula assumes a cylindrical cooling flow. In contrast, in our model the external pressure will compress the post-shock gas, as it starts cooling. Since denser gas emits more radiation and thus cools faster, $d_{\mathrm{cool}}$ is only an upper limit. With this in mind, figure~\ref{fig:rhocool} (lower panel) indicates that the cooling lengths for our fiducial model is consistent with the X-ray observations that do not resolve the wind shock \citep{2008A&A...488L..13S}.
 
-In our model, it is irrelevant how much of the external pressure is provided by the magnetic field in the disk wind and how much by thermodynamic pressure. The region of interest is still within the Alfv\'en surface (see references in Sect.~\ref{sect:boundary}), so the influence of the magnetic field probably dominates. Otherwise, the disk wind would also have to be very dense (probably too dense to be consistent with observations) to provide this pressure. Observationally, it is difficult to distinguish the stellar wind from the disk wind. The slower jet components observed further away from the jet axis carry much of the mass flow \citep{2000ApJ...537L..49B}. Their origin is probably the inner region of the disk and not the star \citep{2003ApJ...590L.107A}. Thus, it is fully consistent that our model predicts a mass loss fraction larger than  $10^{-3}$ of the stellar wind at X-ray emitting temperatures. If the disk wind dominates over the stellar wind in mass loss, then the fraction of hot gas in the (stellar plus inner disk) jet might still be small.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{figures/fracxray/fracxray.png}
+\caption{\label{fig:fracxray}
+Fraction of the kinetic energy of a shock that is radiated between 0.3 and 3.0~keV according to the shock models of \protect{\citet{2007A&A...466.1111G}}. A small dependence on the pre-shock density is ignored.
+}
+\end{center}
+\end{figure}
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=1\columnwidth]{figures/result/result.png}
 \caption{\label{fig:result}
-Different scenerios with parameters well withing the range observed for CTTS predict a stellar wind shock that reaches 20-40~AU along the jet, but extends only few AU in the radial direction. For a description of the individual panels see Fig.~\ref{fig:p_ext}.}
+Different scenerios with parameters well within the range observed for CTTS predict a stellar wind shock that reaches 20-40~AU along the jet, but extends only few AU in the radial direction. For a description of the individual panels see Fig.~\ref{fig:p_ext}. The solid histogram in the rightmost panel shows results for the foducial model for $z>5$~AU. All plasma with $T_{\mathrm{post-shock}}>1.5$~MK is found in this region, but only a small fraction of the cooler plasma.}
 \end{center}
 \end{figure}
 
@@ -331,272 +442,60 @@ Different scenerios with parameters well withing the range observed for CTTS pre
 \begin{center}
 \includegraphics[width=0.42\columnwidth]{figures/rhocool/rhocool.png}
 \caption{\label{fig:rhocool}
-Post-shock number density and an estimate (see text) of the cooling distance for the shock models shown in Fig.~\ref{fig:result}.}
+\emph{top}: Pre-shock number density and \emph{bottom} upper limit to the cooling distance (see text) for the shock models shown in Fig.~\ref{fig:result}.}
+\end{center}
+\end{figure}
+
+\subsection{Fit to DG Tau data}
+In this section we perform a formal fit of our model to the \emph{Chandra} data of DG~Tau. 
+Given the limitations of the model, there are some systematic uncertainties in the fitted values. Nevertheless the model reproduces the observations with parameters that are in line with the observational limits discussed above and thus shows that our model is consistent with the data.
+
+We download and extract the following \emph{Chandra} observations from the archive: ObsIDs \dataset[ADS/Sa.CXO#obs/04487]{4487}, \dataset[ADS/Sa.CXO#obs/06409]{6409}, \dataset[ADS/Sa.CXO#obs/07246]{7246}, and \dataset[ADS/Sa.CXO#obs/07247]{7247}. These datasets have been used and are described in \citet{2008A&A...478..797G}, \citet{2008A&A...488L..13S}, and \citet{2009A&A...493..579G} and we refer the reader to those publications for more details. We processed the data with CIAO~4.6 \citep{2006SPIE.6270E..60F}, extracting the CCD spectrum from DG~Tau and a larger, source-free background region on the same chip with the \texttt{specextract} script. Because the number of counts in the soft component is low and we are not interested in the rapid changes seen in the hard emission attributed to the stellar corona \citep{2008A&A...478..797G} we combine all four source spectra. We bin them to 25 counts per bin and subtract the background. We fit a model with two thermal optically thin plasma emission components \citep[APEC,][]{2012ApJ...756..128F} each with its own cold absorber analogous to \citet{2008A&A...478..797G}. We then replace the cooler APEC component by our recollimation shock model. Since the numerical evaluation of this model is slow, we fix the properties of the hot component at the values obtained in the previous fit to reduce the number of free parameters. To further reduce the number of parameters, we set $P_0 = 100\times P_\infty$ and $h=5$~AU. For each set of parameters, our model is evaluated as follows: We solve the ODE in eqn.~\ref{eqn:ode} numerically and calculate mass flux and pre-shock velocity for each numerical step. To take the high absorbing column density to DG~Tau itself into account we discard all steps with $z<5$~AU. We bin the remaining mass flux according to the pre-shock velocity in bins of 250-350, 350-450, ..., 950-1050~km~s$^{-1}$. For each bin we select the appropriate post-shock cooling spectrum from the model grid discussed in Section~\ref{sect:LX} and scale it with the mass flux and an assumed distance to DG~Tau of 140~pc \citep{1994AJ....108.1872K}. We use the Sherpa fitting tool \citep{2001SPIE.4477...76F} to adjust $\dot M$, $P_0$, $v_\infty$, and the absorbing column density $N_\textrm{H}$ along the line-of-sight to the shock to simultaneously reproduce the observed X-ray spectrum and the position of the shock. \citet{2008A&A...488L..13S} and \citet{2011ASPC..448..617G} give distances of 25-45~AU between DG~Tau and the soft X-ray emission, but do not calculate formal errors for the position. For the purpose of a $\chi^2$ fit we compare the position where the shock front intersects the jet axis to the value $z_{max} = 30\pm5$~AU.
+
+The best-fit parameters for the shock model are given in table~\ref{tab:fiducial}, $N_\textrm{H}=(4.7\pm0.3)\cdot10^{21}\mathrm{ cm}^{-2}$ for the shock, and the parameters of the hot coronal component are $N_\textrm{H}=2.6\times10^{22}$~cm$^{-2}$, plasma temperature $kT = 2.2$~keV, and volume emission measure $VEM=5\times10^{52}$~cm$^{-5}$. The best-fit has $z_{max} = 30.4$~AU and $\chi^2_{red}= 1.1$. The fitted spectrum is shown in Figure~\ref{fig:fit}.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{figures/DGTaufit/DGTaufit.png}
+\caption{\label{fig:fit}
+Observed X-ray spectrum of DG~Tau. The best-fit model is shown in red; orange lines represent the weakly absorbed recollimation shock (dominating at low energies) and the strongly absorbed thermal emission component (dominating at high energies).}
 \end{center}
 \end{figure}
 
 \section{Discussion}
 \label{sect:discussion}
-In a CTTS system, stellar wind and disk wind interact. The high pressure of the disk wind can confine the stellar wind into a narrow, jet-like region, bound by an elongated shock surface. For reasonable parameters of $\dot M$, $v_\infty$, $\omega_0$ and $P(z)$ the shock surface encloses a region only several AU wide but tens of AU along the jet axis. 
- 
-The shock surface is so small that it cannot be resolved with current instrumentation and therefore cannot be seen directly as a cavity in the disk wind. A small fraction of the stellar wind is shocked to X-ray emitting temperatures $>1$~MK and provides a stationary X-ray source consistent with observations. 
-Paper~I showed that a shock with these properties is required to explain the observed X-ray emission in the CTTS DG~Tau if shocks are major heating agents. We show that such a shock naturally arises in a scenario where the stellar wind is confined by an external pressure and feeds the innermost layers of the jet.
-Furthermore, \citet{2013A&A...550L...1S} observed C\;{\sc iv} emission in DG Tau that is formed at cooler temperatures than those required for X-ray emission and that is too luminous to be explained by cooled X-ray plasma alone. Almost all solutions of the ODE describing the interaction of stellar and disk wind have more plasma heated to 0.5~MK than to 1~MK and can in principle explain these observations as well. In recent observations in the IR \citet{2014arXiv1404.0728W} also identified a stationary emission region on the jet axis about 40~AU from the central star. They interpret the X-rays,  C\;{\sc iv}, and their own [ Fe\;{\sc ii}] data all as a signature of the same shocked jet, while \citet{2013A&A...550L...1S} point out that the C\;{\sc iv} luminosity is too large to be powered by just the cooling X-ray plasma. Looking at the post-shock temperature distribution in Fig.~\ref{fig:result}, our model can naturally explain how multiple temperature components arise in the stellar wind.
+We show that stellar wind and disk wind can interact in a CTTS system. The magnetic and thermodynamic pressure of the disk wind can confine the stellar wind into a narrow, jet-like region, bound by an elongated shock surface. For reasonable parameters of $\dot M$, $v_\infty$, $\omega_0$ and $P(z)$ the shock surface encloses a region a few AU wide but tens of AU along the jet axis, but our model makes no statement about emission that originates further out in the jet such as Herbig-Haro knots. Only a fraction of the kinetic energy of the stellar wind is converted into heat in the recollimation shock and the remaining velocity can still be sufficient to heat the jet material again when it encounters another obstacle, such as the ISM.
+
+Most of the imaging of YSO winds traces molecular lines and low-ionization stages, e.g. \ion{O}{1} or \ion{Fe}{2}. These lines are formed in low-temperature regions, but not in a hot post-shock plasma. Thus, one could expect to see a hole that is filled by hot post-shock plasma from the stellar wind. However, no such hole is resolved in any CTTS imaging. Our calculations show that the shock surface is so small that it cannot be resolved with current instrumentation\footnote{HST imaging and AO corrected, ground-based IR observations reach a resolution around 0\farcs1, which corresponds to 15~AU for DG Tau -- the closest YSO jet. However, saturation or coverage by a coronagraphic disk often mean that even structures slightly larger can be missed in images, if they are located very close to the central star.} and therefore cannot be seen directly as a cavity in the disk wind. A small fraction of the stellar wind is shocked to X-ray emitting temperatures $>1$~MK and provides a stationary X-ray source consistent with observations. 
+We show that such a shock naturally arises in a scenario where the stellar wind feeds the innermost layer of the jet because it is confined by external pressure.
+Furthermore, \citet{2013A&A...550L...1S} observed C\;{\sc iv} emission in DG Tau that is formed at cooler temperatures than those required for X-ray emission. In recent observations in the IR \citet{2014arXiv1404.0728W} also identified a stationary emission region on the jet axis about 40~AU from the central star. They interpret the X-rays,  C\;{\sc iv}, and their own [ Fe\;{\sc ii}] data all as a signature of the same shocked jet, while \citet{2013A&A...550L...1S} point out that the C\;{\sc iv} luminosity is too large to be powered by just the cooling X-ray plasma. Looking at the post-shock temperature distribution in Fig.~\ref{fig:result}, our model can naturally explain multiple temperature components in the stellar wind.
 
 However, more detailed numerical simulations of the post-shock cooling zone and the shape of the contact discontinuity between the disk wind and the post-shock stellar wind are required to check whether the physical extent of the cooling region behind the shock front and the position of the peak  C\;{\sc iv} emission can be matched to the observations.
 
-\citet{1993ApJ...409..748G} discussed a similar idea as we do here, where they aim to explain the forbidden optical emission lines seen from CTTS with a shock due to the recollimation of the jet outflow. In contrast to our model, they attribute it to the shocked disk wind, not the stellar wind. At the time, the high-temperature emission from CTTS jets was not known and that seems to be a natural choice to keep the shock velocity low. However, a shocked disk wind cannot supply the high shock velocities to explain the resolved X-ray and \ion{C}{4} emission that we now see. On the other hand, it is possible that our model, a shocked stellar wind, will also produce some fraction of the optical line emission.
-Remember that our stellar wind is collimated because it is embedded into a strong disk wind, so we expect that the low-temperature emission from the stellar wind is small compared to the low-temperature emission from the surrounding disk wind. Only for high temperatures (X-ray and FUV emission), the stellar wind will dominate and our model provides a mechanism to explain this emission with a stationary shock front, while disk wind models often require unrealistically high launching velocities to reach X-ray emitting temperatures in oblique shocks. The price we pay is the requirement for stellar mass loss rates orders of magnitude above those of main-sequence stars.
+In any case, Figure~\ref{fig:fit} shows that the model can explain the observed X-ray spectra. The best-fit values obtained for DG~Tau have a significantly higher velocity and lower mass loss rate than the fiducial model. The parameters for the fiducial model are chosen to match the flow velocities and mass loss rates that are observed in jets. Yet, the higher velocity and lower mass loss rate do not directly contradict those observations, because the pre-shock stellar wind extends only over a small area, so that it presumably contributes little to the luminosity in the optical emission lines compared to the inner disk wind. Consequently, the high velocity in the stellar wind is not directly observable. We also note that in the fit we varied only the normalization of the external pressure, but not the spatial profile. Different profiles lead to different shock-front shapes and shock velocities and thus require an adjustment of $v_\infty$ and $\dot M$ to fit the X-ray data. However, the pressure profile caused by the disk wind and disk magnetic field is not very well constrained. Thus, the accuracy of the fitted numbers is not so much limited by the statistical uncertainty given in table~\ref{tab:fiducial}, but by the systematics of the model. The best-fit values should not be taken at face value, but they demonstrate that a recollimation shock is one possible explanation for the observed X-ray emission. 
 
-\citet{2003ApJ...584..843B} discuss other scenarios, that could lead to the generation of quasi-stationary X-ray emission close to the driving source. These authors studied \object{L1551 IRS5}, which is a binary object, and suggested interactions between jet and infalling envelope or between the jets from both sources. In contrast, our model can explain the emission from single objects and it predicts the fastest jet shocks on the jet axis, where they are seen for DG~Tau \citep{2013A&A...550L...1S}. Our work is complementary to the simulations of \citet{2010A&A...511A..42B,2010A&A...517A..68B,2011ApJ...737...54B}, which explore jet launching conditions that lead to emission at several hundred AU from the central star -- about an order of magnitude further along the jet than the scenario we discuss here.
+The idea of a recollimation shock is not new.
+\citet{1993ApJ...409..748G} discussed a similar idea as we do here, where they aim to explain the forbidden optical emission lines seen from CTTS with a shock due to the recollimation of the jet outflow. In contrast to our model, they attribute it to the shocked disk wind, not the stellar wind. However, a shocked disk wind cannot supply the high shock velocities to explain the resolved X-ray and \ion{C}{4} emission that we now see. Our model, a shocked stellar wind, is collimated because it is embedded into a strong disk wind. We expect that the low-temperature emission from the stellar wind is small compared to the low-temperature emission from the surrounding disk wind. Only for high temperatures (X-ray and FUV emission), the stellar wind will dominate because it is faster.
 
-In our model, there is too much parameter degeneracy to turn the argument around and derive $\dot M$ and  $v_\infty$ from the fact that we observe X-ray and FUV emission a few tens of AUs from the star, but our models requires a certain range of external pressures $P(z)$. Too high pressures push the shock front back to the jet axis very close to the star and too low pressures cannot confine the shock region within a few tens of AU.
+Our work is complementary to the simulations of \citet{2010A&A...517A..68B,2010A&A...511A..42B,2011ApJ...737...54B}, which explore jet launching conditions that lead to emission at several hundred AU from the central star -- about an order of magnitude further along the jet than the scenario we discuss here. \citet{2009A&A...502..217M,2012A&A...545A..53M} also perform numerical simulations of a jet confined by a disk wind. Their simulations again deal with larger distances from the central star and they concentrate on knots in the jet. Yet, their bubbles of shock heated gas have very similar shapes compared with our results in Figure~\ref{fig:result}. This indicates that this form is robust and that our results would probably hold in numerical simulations, too. 
+
+Does the scenario of a stellar wind recollimation shock as X-ray source also apply to other CTTS or is it specific to DG Tau? While there is no reason to believe that the wind launching in DG~Tau is unique, it certainly presents us with a special viewing geometry, where the star itself is heavily absorbed, but the jet shock at 30~AU is visible. At the same time, the first knot in the jet that shows X-ray emission is located at 700~AU and thus can be clearly separated from the inner, presumably stationary emission. \citet{2011A&A...530A.123S} analyze three epochs of X-ray emission from HH~154 and see an inner stationary component and a variable component at slightly larger radii. However, there is no gap between both components and the small number of photons makes it difficult to quantify variability and proper motion. Also, the emission from HH~154 is more energetic and would require much larger wind velocities if it is due to a stellar wind recollimation shock. In other young stars with resolved X-ray emission, the central star is either visible and outshines any potential recollimation shock (e.g.\ HD~163296 \citep{2005ApJ...628..811S,2013A&A...552A.142G} or RY~Tau \citep{2014ApJ...788..101S}) or embedded so deep into the cloud that a wind shock at a few tens of AU would be completely absorbed \citep[e.g.\ HH80/81][]{2004ApJ...605..259P}. Thus, we cannot decide this question observationally, but it seems reasonable to assume that the same processes that leads to a recollimation shock in the stellar wind in DG~Tau, should also operate in other CTTS, even if that is not observable.
 
 
 
-\section{Summary}
+\section{Summary and conclusion}
 \label{sect:summary}
-A fast stellar wind that is confined by an external pressure from the disk wind will form a stationary collimation shock. We derive the geometrical shape and other properties of this shock front and find that this model provides a viable explanation of the soft X-ray and FUV emission observed at the base of young stellar jets, specifically in DG~Tau.
+A fast stellar wind that is confined by an external pressure from the disk wind will form a stationary collimation shock \citep{2012MNRAS.422.2282K}. We derive the geometrical shape and other properties of this shock front and find that it encloses a roughly egg-shaped volume for all combinations of parameters discussed in this article. This model provides a viable explanation of the soft X-ray and FUV emission observed at the base of young stellar jets. Specifically for DG~Tau, we fit the parameters of the stellar wind to the observed X-ray spectrum and the observed distance between star and X-ray emission.  We expect recollimation shocks to be present in every jet, but only in the case of DG~Tau it is possible to test this observationally.
 
-Acknowledgement: Support for this work was provided for HMG by NASA through grant GO-12907.01-A from the Space Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS 5-26555 and by NSF AST1313083 and NASA NNX14AB38G for ZYL.
+This analysis shows that collimation shocks in a stellar wind are one possible model to explain stationary X-ray emission in the jets of CTTS, but we cannot claim that recollimation shocks of stellar winds are the only possible explanation until all competing scenarios are analyzed to the same level of detail to be ruled out or confirmed. We stress that our scenario makes no statement about the X-ray emission observed beyond the initial recollimation shock.
 
-\begin{thebibliography}{53}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
-\bibitem[{{Agra-Amboage} {et~al.}(2014){Agra-Amboage}, {Cabrit}, {Dougados},
-  {Kristensen}, {Ibgui}, \& {Reunanen}}]{2014A&A...564A..11A}
-{Agra-Amboage}, V., {Cabrit}, S., {Dougados}, C., {Kristensen}, L.~E., {Ibgui},
-  L., \& {Reunanen}, J. 2014, \aap, 564, A11
 
-\bibitem[{{Anderson} {et~al.}(2003){Anderson}, {Li}, {Krasnopolsky}, \&
-  {Blandford}}]{2003ApJ...590L.107A}
-{Anderson}, J.~M., {Li}, Z.-Y., {Krasnopolsky}, R., \& {Blandford}, R.~D. 2003,
-  \apjl, 590, L107
 
-\bibitem[{{Anderson} {et~al.}(2005){Anderson}, {Li}, {Krasnopolsky}, \&
-  {Blandford}}]{2005ApJ...630..945A}
----. 2005, \apj, 630, 945
+Acknowledgment: 
+Support for this work was provided for HMG by NASA through grant GO-12907.01-A from the Space Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NASA 5-26555 and by NSF AST1313083 and NASA NNX14AB38G for ZYL. We thank T.~Matsakos for discussions about his jet simulations and an anonymous referee for suggestions that helped to improve the relevance and clarity of the paper.
 
-\bibitem[{{Anderson} {et~al.}(2006){Anderson}, {Li}, {Krasnopolsky}, \&
-  {Blandford}}]{2006ApJ...653L..33A}
----. 2006, \apjl, 653, L33
-
-\bibitem[{Anderson {et~al.}(2006)Anderson, Li, Krasnopolsky, \&
-  Blandford}]{Li_Krasnopolsky_Blandford_2006}
-Anderson, J.~M., Li, Z.-Y., Krasnopolsky, R., \& Blandford, R.~D. 2006, The
-  Astrophysical Journal, 653, L33
-
-\bibitem[{{Bacciotti} \& {Eisl{\"o}ffel}(1999)}]{1999A&A...342..717B}
-{Bacciotti}, F., \& {Eisl{\"o}ffel}, J. 1999, \aap, 342, 717
-
-\bibitem[{{Bacciotti} {et~al.}(2000){Bacciotti}, {Mundt}, {Ray},
-  {Eisl{\"o}ffel}, {Solf}, \& {Camezind}}]{2000ApJ...537L..49B}
-{Bacciotti}, F., {Mundt}, R., {Ray}, T.~P., {Eisl{\"o}ffel}, J., {Solf}, J., \&
-  {Camezind}, M. 2000, \apjl, 537, L49
-
-\bibitem[{{Bacciotti} {et~al.}(2004){Bacciotti}, {Ray}, {Coffey},
-  {Eisl{\"o}ffel}, \& {Woitas}}]{2004Ap&SS.292..651B}
-{Bacciotti}, F., {Ray}, T.~P., {Coffey}, D., {Eisl{\"o}ffel}, J., \& {Woitas},
-  J. 2004, \apss, 292, 651
-
-\bibitem[{{Bally} {et~al.}(2003){Bally}, {Feigelson}, \&
-  {Reipurth}}]{2003ApJ...584..843B}
-{Bally}, J., {Feigelson}, E., \& {Reipurth}, B. 2003, \apj, 584, 843
-
-\bibitem[{{Beck} {et~al.}(2008){Beck}, {McGregor}, {Takami}, \&
-  {Pyo}}]{2008ApJ...676..472B}
-{Beck}, T.~L., {McGregor}, P.~J., {Takami}, M., \& {Pyo}, T.-S. 2008, \apj,
-  676, 472
-
-\bibitem[{{Blandford} \& {Payne}(1982)}]{1982MNRAS.199..883B}
-{Blandford}, R.~D., \& {Payne}, D.~G. 1982, \mnras, 199, 883
-
-\bibitem[{{Bonito} {et~al.}(2010{\natexlab{a}}){Bonito}, {Orlando}, {Miceli},
-  {Eisl{\"o}ffel}, {Peres}, \& {Favata}}]{2010A&A...517A..68B}
-{Bonito}, R., {Orlando}, S., {Miceli}, M., {Eisl{\"o}ffel}, J., {Peres}, G., \&
-  {Favata}, F. 2010{\natexlab{a}}, \aap, 517, A68
-
-\bibitem[{{Bonito} {et~al.}(2011){Bonito}, {Orlando}, {Miceli}, {Peres},
-  {Micela}, \& {Favata}}]{2011ApJ...737...54B}
-{Bonito}, R., {Orlando}, S., {Miceli}, M., {Peres}, G., {Micela}, G., \&
-  {Favata}, F. 2011, \apj, 737, 54
-
-\bibitem[{{Bonito} {et~al.}(2010{\natexlab{b}}){Bonito}, {Orlando}, {Peres},
-  {Eisl{\"o}ffel}, {Miceli}, \& {Favata}}]{2010A&A...511A..42B}
-{Bonito}, R., {Orlando}, S., {Peres}, G., {Eisl{\"o}ffel}, J., {Miceli}, M., \&
-  {Favata}, F. 2010{\natexlab{b}}, \aap, 511, A42
-
-\bibitem[{{Bzowski} {et~al.}(2003){Bzowski}, {M{\"a}kinen}, {Kyr{\"o}l{\"a}},
-  {Summanen}, \& {Qu{\'e}merais}}]{2003A&A...408.1165B}
-{Bzowski}, M., {M{\"a}kinen}, T., {Kyr{\"o}l{\"a}}, E., {Summanen}, T., \&
-  {Qu{\'e}merais}, E. 2003, \aap, 408, 1165
-
-\bibitem[{{Coffey} {et~al.}(2008){Coffey}, {Bacciotti}, \&
-  {Podio}}]{2008ApJ...689.1112C}
-{Coffey}, D., {Bacciotti}, F., \& {Podio}, L. 2008, \apj, 689, 1112
-
-\bibitem[{{Cranmer}(2009)}]{2009LRSP....6....3C}
-{Cranmer}, S.~R. 2009, Living Reviews in Solar Physics, 6, 3
-
-\bibitem[{{Edwards} {et~al.}(2006){Edwards}, {Fischer}, {Hillenbrand}, \&
-  {Kwan}}]{2006ApJ...646..319E}
-{Edwards}, S., {Fischer}, W., {Hillenbrand}, L., \& {Kwan}, J. 2006, \apj, 646,
-  319
-
-\bibitem[{{Feldman} {et~al.}(2005){Feldman}, {Landi}, \&
-  {Schwadron}}]{2005JGRA..110.7109F}
-{Feldman}, U., {Landi}, E., \& {Schwadron}, N.~A. 2005, Journal of Geophysical
-  Research (Space Physics), 110, 7109
-
-\bibitem[{{Gomez de Castro} \& {Pudritz}(1993)}]{1993ApJ...409..748G}
-{Gomez de Castro}, A.~I., \& {Pudritz}, R.~E. 1993, \apj, 409, 748
-
-\bibitem[{{G{\"u}del} {et~al.}(2008){G{\"u}del}, {Skinner}, {Audard}, {Briggs},
-  \& {Cabrit}}]{2008A&A...478..797G}
-{G{\"u}del}, M., {Skinner}, S.~L., {Audard}, M., {Briggs}, K.~R., \& {Cabrit},
-  S. 2008, \aap, 478, 797
-
-\bibitem[{{G{\"u}del} {et~al.}(2005){G{\"u}del}, {Skinner}, {Briggs}, {Audard},
-  {Arzner}, \& {Telleschi}}]{2005ApJ...626L..53G}
-{G{\"u}del}, M., {Skinner}, S.~L., {Briggs}, K.~R., {Audard}, M., {Arzner}, K.,
-  \& {Telleschi}, A. 2005, \apjl, 626, L53
-
-\bibitem[{{G{\"u}del} {et~al.}(2011){G{\"u}del}, {Audard}, {Bacciotti}, {Bary},
-  {Briggs}, {Cabrit}, {Carmona}, {Codella}, {Dougados}, {Eisl{\"o}ffel},
-  {Gueth}, {G{\"u}nther}, {Herczeg}, {Kundurthy}, {Matt}, {Mutel}, {Ray},
-  {Schmitt}, {Schneider}, {Skinner}, \& {van Boekel}}]{2011ASPC..448..617G}
-{G{\"u}del}, M., {et~al.} 2011, in Astronomical Society of the Pacific
-  Conference Series, Vol. 448, 16th Cambridge Workshop on Cool Stars, Stellar
-  Systems, and the Sun, ed. C.~{Johns-Krull}, M.~K. {Browning}, \& A.~A.
-  {West}, 617
-
-\bibitem[{{Guhathakurta} {et~al.}(1999){Guhathakurta}, {Sittler}, {Fisher},
-  {McComas}, \& {Thompson}}]{1999GeoRL..26.2901G}
-{Guhathakurta}, M., {Sittler}, E., {Fisher}, R., {McComas}, D., \& {Thompson},
-  B. 1999, \grl, 26, 2901
-
-\bibitem[{{G{\"u}nther}(2013)}]{2013AN....334...67G}
-{G{\"u}nther}, H.~M. 2013, Astronomische Nachrichten, 334, 67
-
-\bibitem[{{G{\"u}nther} {et~al.}(2009){G{\"u}nther}, {Matt}, \&
-  {Li}}]{2009A&A...493..579G}
-{G{\"u}nther}, H.~M., {Matt}, S.~P., \& {Li}, Z.-Y. 2009, \aap, 493, 579
-
-\bibitem[{{G{\"u}nther} {et~al.}(2013){G{\"u}nther}, {Schneider}, \&
-  {Li}}]{2013A&A...552A.142G}
-{G{\"u}nther}, H.~M., {Schneider}, P.~C., \& {Li}, Z.-Y. 2013, \aap, 552, A142
-
-\bibitem[{{Hartigan} {et~al.}(1995){Hartigan}, {Edwards}, \&
-  {Ghandour}}]{1995ApJ...452..736H}
-{Hartigan}, P., {Edwards}, S., \& {Ghandour}, L. 1995, \apj, 452, 736
-
-\bibitem[{{Kohler} {et~al.}(2012){Kohler}, {Begelman}, \&
-  {Beckwith}}]{2012MNRAS.422.2282K}
-{Kohler}, S., {Begelman}, M.~C., \& {Beckwith}, K. 2012, \mnras, 422, 2282
-
-\bibitem[{{Kompaneets}(1960)}]{1960SPhD....5...46K}
-{Kompaneets}, A.~S. 1960, Soviet Physics Doklady, 5, 46
-
-\bibitem[{{Kwan} {et~al.}(2007){Kwan}, {Edwards}, \&
-  {Fischer}}]{2007ApJ...657..897K}
-{Kwan}, J., {Edwards}, S., \& {Fischer}, W. 2007, \apj, 657, 897
-
-\bibitem[{{Kwan} \& {Tademaru}(1988)}]{1988ApJ...332L..41K}
-{Kwan}, J., \& {Tademaru}, E. 1988, \apjl, 332, L41
-
-\bibitem[{{Lavalley} {et~al.}(1997){Lavalley}, {Cabrit}, {Dougados}, {Ferruit},
-  \& {Bacon}}]{1997A&A...327..671L}
-{Lavalley}, C., {Cabrit}, S., {Dougados}, C., {Ferruit}, P., \& {Bacon}, R.
-  1997, \aap, 327, 671
-
-\bibitem[{{Lavalley-Fouquet} {et~al.}(2000){Lavalley-Fouquet}, {Cabrit}, \&
-  {Dougados}}]{2000A&A...356L..41L}
-{Lavalley-Fouquet}, C., {Cabrit}, S., \& {Dougados}, C. 2000, \aap, 356, L41
-
-\bibitem[{{Le Chat} {et~al.}(2012){Le Chat}, {Issautier}, \&
-  {Meyer-Vernet}}]{2012SoPh..279..197L}
-{Le Chat}, G., {Issautier}, K., \& {Meyer-Vernet}, N. 2012, \solphys, 279, 197
-
-\bibitem[{{Matsakos} {et~al.}(2009){Matsakos}, {Massaglia}, {Trussoni},
-  {Tsinganos}, {Vlahakis}, {Sauty}, \& {Mignone}}]{2009A&A...502..217M}
-{Matsakos}, T., {Massaglia}, S., {Trussoni}, E., {Tsinganos}, K., {Vlahakis},
-  N., {Sauty}, C., \& {Mignone}, A. 2009, \aap, 502, 217
-
-\bibitem[{{Matt} \& {Pudritz}(2005)}]{2005ApJ...632L.135M}
-{Matt}, S., \& {Pudritz}, R.~E. 2005, \apjl, 632, L135
-
-\bibitem[{{Matt} \& {Pudritz}(2007)}]{2007IAUS..243..299M}
-{Matt}, S., \& {Pudritz}, R.~E. 2007, in IAU Symposium, Vol. 243, IAU
-  Symposium, ed. J.~{Bouvier} \& I.~{Appenzeller}, 299--306
-
-\bibitem[{{Matt} \& {Pudritz}(2008)}]{2008ApJ...678.1109M}
----. 2008, \apj, 678, 1109
-
-\bibitem[{{Pelletier} \& {Pudritz}(1992)}]{1992ApJ...394..117P}
-{Pelletier}, G., \& {Pudritz}, R.~E. 1992, \apj, 394, 117
-
-\bibitem[{P\'erez \& Granger(2007)}]{PER-GRA:2007}
-P\'erez, F., \& Granger, B.~E. 2007, Computing in Science and Engineering, 9,
-  21
-
-\bibitem[{{Podio} {et~al.}(2006){Podio}, {Bacciotti}, {Nisini},
-  {Eisl{\"o}ffel}, {Massi}, {Giannini}, \& {Ray}}]{2006A&A...456..189P}
-{Podio}, L., {Bacciotti}, F., {Nisini}, B., {Eisl{\"o}ffel}, J., {Massi}, F.,
-  {Giannini}, T., \& {Ray}, T.~P. 2006, \aap, 456, 189
-
-\bibitem[{{Raga} {et~al.}(2002){Raga}, {Noriega-Crespo}, \&
-  {Vel{\'a}zquez}}]{2002ApJ...576L.149R}
-{Raga}, A.~C., {Noriega-Crespo}, A., \& {Vel{\'a}zquez}, P.~F. 2002, \apjl,
-  576, L149
-
-\bibitem[{{Ramsey} \& {Clarke}(2011)}]{2011ApJ...728L..11R}
-{Ramsey}, J.~P., \& {Clarke}, D.~A. 2011, \apjl, 728, L11
-
-\bibitem[{{Schneider} {et~al.}(2013{\natexlab{a}}){Schneider}, {Eisl{\"o}ffel},
-  {G{\"u}del}, {G{\"u}nther}, {Herczeg}, {Robrade}, \&
-  {Schmitt}}]{2013A&A...557A.110S}
-{Schneider}, P.~C., {Eisl{\"o}ffel}, J., {G{\"u}del}, M., {G{\"u}nther}, H.~M.,
-  {Herczeg}, G., {Robrade}, J., \& {Schmitt}, J.~H.~M.~M. 2013{\natexlab{a}},
-  \aap, 557, A110
-
-\bibitem[{{Schneider} {et~al.}(2013{\natexlab{b}}){Schneider}, {Eisl{\"o}ffel},
-  {G{\"u}del}, {G{\"u}nther}, {Herczeg}, {Robrade}, \&
-  {Schmitt}}]{2013A&A...550L...1S}
----. 2013{\natexlab{b}}, \aap, 550, L1
-
-\bibitem[{{Schneider} {et~al.}(2011){Schneider}, {G{\"u}nther}, \&
-  {Schmitt}}]{2011A&A...530A.123S}
-{Schneider}, P.~C., {G{\"u}nther}, H.~M., \& {Schmitt}, J.~H.~M.~M. 2011, \aap,
-  530, A123
-
-\bibitem[{{Schneider} \& {Schmitt}(2008)}]{2008A&A...488L..13S}
-{Schneider}, P.~C., \& {Schmitt}, J.~H.~M.~M. 2008, \aap, 488, L13
-
-\bibitem[{{Schneider}(in prep)}]{SchneiderDGTauXray}
-{Schneider}, P. C. e.~a. in prep
-
-\bibitem[{{Shu} {et~al.}(1994){Shu}, {Najita}, {Ostriker}, {Wilkin}, {Ruden},
-  \& {Lizano}}]{1994ApJ...429..781S}
-{Shu}, F., {Najita}, J., {Ostriker}, E., {Wilkin}, F., {Ruden}, S., \&
-  {Lizano}, S. 1994, \apj, 429, 781
-
-\bibitem[{{Swartz} {et~al.}(2005){Swartz}, {Drake}, {Elsner}, {Ghosh}, {Grady},
-  {Wassell}, {Woodgate}, \& {Kimble}}]{2005ApJ...628..811S}
-{Swartz}, D.~A., {Drake}, J.~J., {Elsner}, R.~F., {Ghosh}, K.~K., {Grady},
-  C.~A., {Wassell}, E., {Woodgate}, B.~E., \& {Kimble}, R.~A. 2005, \apj, 628,
-  811
-
-\bibitem[{{White} {et~al.}(2014){White}, {McGregor}, {Bicknell}, {Salmeron}, \&
-  {Beck}}]{2014arXiv1404.0728W}
-{White}, M.~C., {McGregor}, P.~J., {Bicknell}, G.~V., {Salmeron}, R., \&
-  {Beck}, T.~L. 2014, ArXiv e-prints
-
-\bibitem[{{Zel'dovich} \& {Raizer}(1967)}]{1967pswh.book.....Z}
-{Zel'dovich}, Y.~B., \& {Raizer}, Y.~P. 1967, {Physics of shock waves and
-  high-temperature hydrodynamic phenomena}
-
-\end{thebibliography}
-
+\bibliography{bibliography/converted_to_latex.bib}
 
 \end{document}
 
