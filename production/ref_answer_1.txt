@@ -59,7 +59,7 @@ Tau. Other models in the literature explain the X-rays by other mechanisms,
 but they may not be the only possible explanation. It is important to study
 every promising scenario in some detail to decide if it is compatible with
 observations or not. In this work, we want to decide if a recollimation shock
-is one possible model.
+is a viable model.
 
 Additional references or remarks connecting our work to previously published
 scenarios have been added at different points in the manuscript.
@@ -184,8 +184,8 @@ that other CTTS have similar properties, even if we cannot observe them? We
 realize that this is speculative, but if DG Tau is powered by a stellar wind
 shock, there is no reason to believe that stellar wind shock might not occur in
 other sources, too. 
-We have extended the discussion on this point significantly and we hope that is
-now addresses the referee's concerns.
+We have extended the discussion on this point significantly and we hope that 
+the revised version now addresses the referee's concerns. 
 
 
 >>> It seems that the proposed scenario fits better for C IV than for X-rays.
@@ -249,7 +249,7 @@ model (magnetic fields, sound speed, initial wind temperature).
 >>> in this case or explore also this scenario
 
 Kompaneet's approximation is clearly violated at large distances from the jet
-axis since the pressure beyond the outer edge of the disk falls of the the
+axis since the pressure beyond the outer edge of the disk falls to the much lower 
 values of the star forming cloud. In our model, we deal with much smaller
 scales - scales so small that they all fall within the innermost resolution
 element of the Matsakos et al simulations. We have use the word "apparent
@@ -271,7 +271,7 @@ hole filled with stellar wind within the disk wind.
 >>> the jet densities, these are very high
 
 Our model deals with the innermost component of the jet up to 50 AU from the
-central star. In contrast, Podio et al. measure the density several 100 AU from
+central star. In contrast, Podio et al. measure the density several hundred AUs from
 the central source. Even for well collimated jets with small opening angles we
 expect lower densities at such large distances.
 We have added a discussion of these points in section 1.1.
@@ -300,8 +300,8 @@ from the sentence.
 >>> "fiducial" model is the best case
 
 In this context, we use the term "fiducial" in the sense that this is our
-"standard" or "default" model and we vary one parameter at the time from the
-values of these models. The parameter values are chosen form what we expect to
+"reference" model and we vary one parameter at the time from the
+values of this model. The parameter values are chosen form what we expect to
 find given the discussion in section 3 (e.g. the speed is taken to be just a
 little higher than the highest observed speeds in the optical component where
 we can measure them by Doppler shift). The "fiducial" model is not necessarily
@@ -332,7 +332,7 @@ temperature. So, it is not surprising that the average temperature in our model
 is lower than the fitted temperatures in the literature.
 
 3) Very different temperatures are observed in different jets. In DG Tau (arguably
-the best comparison for the model with discuss here) the temperature is a
+the best comparison for the model we discuss here) the temperature is a
 little higher: Gudel 05,08 say 3.4 MK, but Guenther et al 09 show that there
 is a strong degeneracy in the parameters space with the absorption and values
 between 0.2-0.4 keV = 2-4 MK should be considered. 
@@ -349,12 +349,12 @@ keV = 6 MK (Schneider et al 2011 analyze the temperature vs. the distance from
 the source).
 
 We have argued above that most likely the emission seen in these other sources
-is due to a different process, e.g. a termination shock or slower material in
-the jet catching up with faster one as in the simulations of Bonito. Yet, some
+is due to a different process, e.g. a termination shock or faster material in
+the jet catching up with slower one downstream as in the simulations of Bonito. Yet, some
 fraction of the cool material could also be due to a wind shock because the
 wind shock and the first Herbig-Haro knot might blend together at the spatial
 resolution of Chandra. The fact that we can reproduce those temperatures means
-that this scenario is at least possible.
+that this scenario is at least plausible. 
 
 
 >>> "cannot be resolved": HST can resolve shocks in Halpha and [SII] with 
@@ -365,14 +365,14 @@ HST is a spectacular instrument for resolving stellar jets and current IR
 instruments with AO on the VLT or Gemini also reach fantastic resolutions of the
 order 0.1". Yet, that is still insufficient to resolve the recollimation
 shocks we predict here, although new observations are getting very close to
-this limit and we are exited that this may provide a new test to verify or
+this limit and we are excited that this may provide a new test to verify or
 falsify our model in the future.
 
 The distance to the closest stellar jets (incl DG Tau) is about 140 pc. At that
 distance 0.1" provides a resolution of 14 AU. The maximal radius of our
 fiducial model is about 5 AU, the diameter is therefore 10 AU, comparable to
 the resolution limit.
-However, the contrast between a slightline that passes though the jet axis
+However, the contrast between a slightline that passes through the jet axis
 (this slightline passes: disk wind - stellar wind - disk wind) and a slightline
 that passes at omega = 5 AU (this sightline passes only through disk wind) is
 expected to be small, because the layer of the disk wind (which is common to
@@ -409,7 +409,7 @@ larger than 10^−3 of the stellar wind at X-ray emitting temperatures."), so we
 know from paper I that this reproduces the correct L_X. However, L_X is easy to
 estimate from our solutions to the ODE, so we now give this number explicitly.
 
-We have gone even one step further and added a new section 4.5 where we perform
+We have gone one step further and added a new section 4.5 where we perform
 a numerical fit, that reproduces the observed Chandra spectrum from DG Tau and
 the observed distance between the star and the soft emission at the same
 time. The resulting fit is statistically acceptable and we added best-fit
@@ -473,9 +473,9 @@ discussion about the applicability to other sources. In short, we can resolve
 the X-ray spectrum of the component we need only in DG Tau. This does neither
 prove nor disprove the existence of recollimation shocks as X-ray sources in
 other jets, it is only a testimony to our limited observational
-possibilities. We regard it as likely, that DG Tau is not a special case and
+capabilities. We regard it as likely, that DG Tau is not a special case and
 that other source might show similar phenomena, which (for different reasons)
-are unobservable. However, the current data also allows the interpretation that
+are unobservable so far. However, the current data also allows the interpretation that
 DG Tau is fundamentally different in some way from all other known young stars.
 
 We believe that our work is complementary to other proposed models in the sense
