@@ -1,8 +1,6 @@
-%% This is emulateapj reformatting of the AASTEX sample document
-%%
-\documentclass{emulateapj}
+%\documentclass[10pt,flushrt,preprint]{aastex}
 
-\usepackage{natbib}
+\documentclass[manuscript]{aastex}
 
 \usepackage{graphicx}
 \usepackage[space]{grffile}
@@ -14,14 +12,35 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=false,pdfborder={0 0 0},}
 
-\newcommand{\vdag}{(v)^\dagger}
+\usepackage{natbib}
 
 \newcommand{\truncateit}[1]{\truncate{0.8\textwidth}{#1}}
 \newcommand{\scititle}[1]{\title[\truncateit{#1}]{#1}}
 
 
+%% preprint2 produces a double-column, single-spaced document:
+
+%% \documentclass[preprint2]{aastex}
+
+%% Sometimes a paper's abstract is too long to fit on the
+%% title page in preprint2 mode. When that is the case,
+%% use the longabstract style option.
+
+%% \documentclass[preprint2,longabstract]{aastex}
+
+%% If you want to create your own macros, you can do so
+%% using \newcommand. Your macros should appear before
+%% the \begin{document} command.
+%%
+%% If you are submitting to a journal that translates manuscripts
+%% into SGML, you need to follow certain guidelines when preparing
+%% your macros. See the AASTeX v5.x Author Guide
+%% for information.
+
+
 %% You can insert a short comment on the title page using the command below.
-%\slugcomment{To appear in The Astrophysical Journal (ApJ)}
+
+\slugcomment{To appear in The Astrophysical Journal (ApJ)}
 
 %% If you wish, you may supply running head information, although
 %% this information may be modified by the editorial offices.
@@ -44,7 +63,6 @@
 
 \title{Recollimation boundary layers as X-ray sources in young stellar jets}
 
-
 %% Use \author, \affil, and the \and command to format
 %% author and affiliation information.
 %% Note that \email has replaced the old \authoremail command
@@ -52,35 +70,7 @@
 %% anywhere in the paper, not just in the front matter.
 %% As in the title, use \\ to force line breaks.
 
-\author{Hans Moritz G{\"{u}}nther}
-\affil{Harvard-Smithsonian Center for Astrophysics}
- 
-\author{Zhi-Yun Li}
-\affil{Affiliation not available}
- 
-\author{Christian}
-\affil{Affiliation not available}
-
-
-%% Notice that each of these authors has alternate affiliations, which
-%% are identified by the \altaffilmark after each name.  Specify alternate
-%% affiliation information with \altaffiltext, with one command per each
-%% affiliation.
-
-%\altaffiltext{1}{Visiting Astronomer, Cerro Tololo Inter-American Observatory.
-%CTIO is operated by AURA, Inc.\ under contract to the National Science
-%Foundation.}
-%\altaffiltext{2}{Society of Fellows, Harvard University.}
-%\altaffiltext{3}{present address: Center for Astrophysics,
-%    60 Garden Street, Cambridge, MA 02138}
-%\altaffiltext{4}{Visiting Programmer, Space Telescope Science Institute}
-%\altaffiltext{5}{Patron, Alonso's Bar and Grill}
-
-%% Mark off your abstract in the ``abstract'' environment. In the manuscript
-%% style, abstract will output a Received/Accepted line after the
-%% title and affiliation information. No date will appear since the author
-%% does not have this information. The dates will be filled in by the
-%% editorial office after submission.
+\author{Hans Moritz G{\"{u}}nther\affil{Harvard-Smithsonian Center for Astrophysics} Zhi-Yun Li\affil{Affiliation not available} Christian\affil{Affiliation not available}}
 
 \begin{abstract}
 Young stars accrete mass from circumstellar disks and in many cases, the
@@ -107,38 +97,14 @@ stationary X-ray emission close to the jet launching point.
 
 
 
-\bibliographystyle{apj}
-
 %% Keywords should appear after the \end{abstract} command. The uncommented
 %% example has been keyed in ApJ style. See the instructions to authors
 %% for the journal to which you are submitting your paper to determine
 %% what keyword punctuation is appropriate.
 
-%% Authors who wish to have the most important objects in their paper
-%% linked in the electronic edition to a data center may do so in the
-%% subject header.  Objects should be in the appropriate "individual"
-%% headers (e.g. quasars: individual, stars: individual, etc.) with the
-%% additional provision that the total number of headers, including each
-%% individual object, not exceed six.  The \objectname{} macro, and its
-%% alias \object{}, is used to mark each object.  The macro takes the object
-%% name as its primary argument.  This name will appear in the paper
-%% and serve as the link's anchor in the electronic edition if the name
-%% is recognized by the data centers.  The macro also takes an optional
-%% argument in parentheses in cases where the data center identification
-%% differs from what is to be printed in the paper.
+%\keywords{globular clusters: general --- globular clusters: individual(NGC 6397, NGC 6624, NGC 7078, Terzan 8}
 
-%\keywords{globular clusters: general --- globular clusters: individual(\objectname{NGC 6397},
-%\object{NGC 6624}, \objectname[M 15]{NGC 7078},
-%\object[Cl 1938-341]{Terzan 8})}
-
-%% From the front matter, we move on to the body of the paper.
-%% In the first two sections, notice the use of the natbib \citep
-%% and \citet commands to identify citations.  The citations are
-%% tied to the reference list via symbolic KEYs. The KEY corresponds
-%% to the KEY in the \bibitem in the reference list below. We have
-%% chosen the first three characters of the first author's name plus
-%% the last two numeral of the year of publication as our KEY for
-%% each reference.
+\bibliographystyle{aj}
 
 
 \section{Introduction} 
@@ -321,7 +287,7 @@ Different models exist to explain wind launching from the stellar surface \citep
 Numerically, the magneto-centrifugally accelerated disk wind is probably the best explored component. Magneto-hydrodynamic (MHD) simulations of the disk wind have been performed in 2D \citep[e.g.][]{2005ApJ...630..945A}, 2.5D \citep[e.g.][]{2011ApJ...728L..11R} or 3D \citep[e.g.][]{2006ApJ...653L..33A}, but typically do not resolve the stellar wind. However, they show that the disk wind is collimated close to the axis and that the densities are largest in this region. Furthermore, the Alfv\'en surface (which separates the magnetically dominated region from the flow-dominated region) is located at many AUs for the inner layers of the jet. This is in contrast with the outer, less collimated layers of the wind, which leave the magnetically dominated region at a few AUs.
 
 \citet{2009A&A...502..217M} present analytical and numerical solutions for several scenarios that mix an inner stellar wind and an outer disk wind \citep[this model has been extended in][]{2012A&A...545A..53M,2014A&A...562A.117T}. In contrast to our approach, they impose a smooth transition between stellar wind and disk wind and they start their simulation at $z=50$~AU instead of at the star. With some time variability in the wind launching their models produce knot features in the jet. In the context of our analysis, we note that the pressure in their models is magnetically dominated and that Kompaneet's approximation does not hold in the disk wind, but that the presure gradient is small on scales of a few AU. The pressure at the jet axis is high in the plane of the disk and drops by one to two orders of magnitude until it reaches a plateau ($P_\infty$). Below we use an exponential $P(z)=P_\infty+P_0\exp\left(-\frac{z}{h}\right)$ to mimic this profile.
-Similar profiles for the inner density and pressure are seen in simulations by other groups \citep[e.g.\][]{2005ApJ...630..945A,Li_Krasnopolsky_Blandford_2006,2008ApJ...678.1109M}.
+Similar profiles for the inner density and pressure are seen in simulations by other groups \citep[e.g.\][]{2005ApJ...630..945A,2006ApJ...653L..33A,2008ApJ...678.1109M}.
 
 Figure~\ref{fig:p_ext} shows how different pressure profiles influence the shock position. Larger pressures force the shock front onto the symmetry axes for smaller $z$ (top row). If the pressure is constant in the region where the shock front hits the symmetry axis, then the angle between the shock front and the jet axis is large, which causes high post-shock temperatures (solid red line in top row). On the other hand, if there is a pressure gradient when the shock front bends towards the jet axis, then the shock front and the stream lines form a smaller angle and the post-shock temperatures are lower (dotted black line in the top row).
 
