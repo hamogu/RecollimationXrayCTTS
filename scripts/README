@@ -1,0 +1,107 @@
+This README explains the code associated with the paper
+"Recollimation boundary layers as X-ray sources in young stellar
+jets".
+
+The code consists of two parts:
+1) Semi-analytic model of the wind shock (up to Sect. 4.4)
+2) Fit to the Chandra data of DG Tau
+
+1. Semi-analytic wind model
+---------------------------
+This code requires a python installation with numpy and scipy and IPython.
+The module `stellarwindshock.py` implements the formulae in the paper;
+the IPython notebook `jet_recol_shocks.ipynb` uses this module and makes
+figures 2-8 in the paper. Open this notebook to see how `stellarwindshock.py`
+is used and to modify the input parameters of the shock models.
+
+If IPython is installed on your system, go to the directory with this code
+and type:
+>>> ipython notebook --pylab=inline
+A tab in your webbrower will open, where you can select 
+`jet_recol_shocks.ipynb`.
+
+More information about IPython is available at ipython.org.
+
+
+2. Fit to the Chandra data of DG Tau
+-------------------------------------
+The Chandra data is downloaded and extracted using CIAO 
+(http://cxc.harvard.edu/ciao/) with the following commands:
+
+# These are the commands used to get the data for DG Tau.
+# They assume that the CIAO system is started already and should be executed
+# in a shell (not in Python)
+
+# > download_chandra_obsid 4487,6409,7246,7247
+
+# > specextract "*/*/*evt2*[sky=circle(04:27:04.70,26:06:16.3,0.05')]" DGTau bkgfile="*/*/*evt2*[sky=circle(04:27:07.6,26:09:28,1.4')]" combine=yes
+
+As explained in the article, the model fit is done using the Sherpa package.
+Since `stellarwindshock.py` depends on Scipy and Sherpa does not provide Scipy
+in the current release, some tricks are necessary to make this work.
+The file `odemodel.py` implements a Sherpa model according to the documentation
+of the Sherpa package.
+In each step, the wind model must be solved. The Sherpa model calls a short
+driver script `connectsherpa.py` which starts a new shell. In this shell, the
+environment variables are set such that not the python delivered in the 
+CIAO/SHERPA package are started, but a separate python installation which has
+Scipy installed. The recollimation shock model is then evaluated in this 
+second shell and the results are passed back to Sherpa.
+This method is slow and can hopefully be simplified in the future.
+See `odemodel.py` for more details.
+
+Below are the commands issued in Sherpa to make the fit and plot presented in
+Section 4.5 in the paper:
+
+
+import odemodel
+# Change that to your data path:
+load_data('/data/guenther/obs/Chandra/DG_Tau/DGTau_combined_src.pi')
+group_counts(20)
+subtract()
+ignore(None, 0.3)
+ignore(7., None)
+set_source(xsphabs.a1 * xsvapec.v1+ xsphabs.a2 * xsvapec.v2)
+# Start close to Guedel et al values, so that jet is comp1 and corona is comp2
+a1.nh = 0.1
+v1.kT = 0.2
+a2.nH = 1
+v2.kT = 2
+fit(1)
+freeze(a2.nh,v2.kT, v2.norm)
+
+load_arrays(2,[123456], [30], [5])
+set_source(2, recol.r1)
+r1.p_inf=r1.p0 * 0.01
+r1.p0.min=1e-7
+r1.p0.max=1e-4
+r1.mdot.max=1e-6
+r1.mdot.min=1e-10
+r1.mdot = 5e-10
+r1.p_scale=5
+r1.v.max=1000
+set_source(1, xsphabs.a1 * recol.r1 + xsphabs.a2 * xsvapec.v2)
+# set as close to best fit values as I can
+a1.nH     =     0.466986    
+r1.v      =     837.509     
+r1.mdot   =     5.17862e-10 
+r1.p0     =     1.43298e-05 
+
+plot_fit()
+plot_model_component(a1*r1, overplot=True)
+plot_model_component(a2*v2, overplot=True)
+log_scale()
+limits(Y_AXIS, 0.0001, 0.02)
+limits(X_AXIS, .55, 6.4)
+set_plot_title("")
+printopts = {'bottommargin':0.1, 'topmargin':.02, 'leftmargin':.1, 'rightmargin': .02, 'dpi': 300, 'clobber': True, 'fittopage': True}
+
+printopts = {'scaleheight':500, 'dpi': 300, 'clobber': True, 'fittopage': True}
+# because my computer has an ATI Graphics card that turns the plot window
+set_preference("export.printmethod", "xoffscreen")
+set_plot( { 'bottommargin' :0.15, 'topmargin': 0.02, 'leftmargin': 0.2, 'rightmargin': 0.02 } )
+set_axis("ax1","ticklabel.size=30 label.size=30 offset.perpendicular=50.00")
+set_axis("ay1","ticklabel.size=30 label.size=30 offset.perpendicular=100.00")
+
+#print_window('../figures/DGTaufit/DGTaufit.png', {'dpi': 300, 'clobber': True})
+#print_window('../figures/DGTaufit/DGTaufit.eps', printopts)

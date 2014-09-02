@@ -1,3 +1,13 @@
+'''Recollimation boundary layers as X-ray sources in young stellar jets
+
+This module contains Python code to calculate the properties of recollimation
+shocks of a stellar wind that are caused by an external pressure (e.g. a
+disk wind) as described in the manuscript itself.
+This module provides classes for different pressure profiles to be used with
+either a hot or a cold stellar wind.
+Individual functions are documented, for an example see the IPython notebook
+called `jet_recol_shocks.ipynb`.
+'''
 import numpy as np
 from scipy.integrate import odeint
 from scipy.interpolate import interp1d
@@ -61,7 +71,7 @@ class PowerPres(object):
 
 
 class ExpPres(object):
-    '''An explonential pressure profile
+    '''An exponential pressure profile
 
     p_inf + p_0 * np.exp(-z/h)
     '''
@@ -89,9 +99,10 @@ class ExpPres(object):
 
 
 '''x is pre-shock velocity in km/s, result is fraction of kinetic energy 
-radiated in X-rays. The values for the y-axis (the fraction of the total luminosity emitted in X-rays) are justified in the appendix of the notebook.
-Here they are just copied verbatim, to ensure that this code runs without
-the file that contains the shock models of Guenther et al., 2007).
+radiated in X-rays. The values for the y-axis (the fraction of the total 
+luminosity emitted in X-rays) are justified in the appendix of the notebook.
+Here they are just copied verbatim, to ensure that this code runs even if the 
+shock models of Guenther et al. (2007) are not installed.
 '''
 xrayfrac = interp1d(np.arange(0.,1001.,100.),
                     np.array([0, 0, 0, 0.02, 0.10, 0.24, 0.40, 0.51, 0.57, 0.61, 0.65]))
@@ -157,6 +168,7 @@ class StellarWindShock(object):
         r = np.sqrt(omega**2+z**2)
         R0 = self.R0(z)
         r = np.clip(r, 0, R0)
+        # eqn. 13
         return np.tan(np.arctan2(omega, z) - np.arcsin(r/R0))
    
 
@@ -201,6 +213,8 @@ class StellarWindShock(object):
 
     def stellar_wind_density(self, omega, z):
         '''calculate the density of an undisturbed stellar
+
+        see eqn 6 in paper
        
         Parameters
         ----------
@@ -234,7 +248,7 @@ class StellarWindShock(object):
 
     @property
     def T_postshock(self):
-        '''Post-shock temperature in K'''
+        '''Post-shock temperature in K (eqn 15)'''
         return 3./16.*self.mu*self.m_H/self.k_B*self.v_shock**2
 
 
@@ -255,7 +269,7 @@ class StellarWindShock(object):
 
     @property
     def L_X(self):
-        '''X-ray luminosity in erg/s for each sep in z'''
+        '''X-ray luminosity in erg/s for each step in z'''
         return 0.5 * self.massflux * self.v_shock**2*xrayfrac(self.v_shock/1e5)
 
 
@@ -338,7 +352,7 @@ class HotStellarWindShock(StellarWindShock):
     '''This class extends class:`StellarWindShock` for hot winds.
    
     This class is derived from class:`StellarWindShock`. It is implemented as a
-    separate class (rather than just adding a parameter for the initial wind 
+    separate class rather than just adding a parameter for the initial wind 
     temperature to class:`StellarWindShock` because there are situations when
     no numerical solution is possible within the assumptions that went into 
     the implemented formulas.

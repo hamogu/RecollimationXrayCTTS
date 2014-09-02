@@ -1,3 +1,9 @@
+'''Make Fig 1 in the paper
+
+This figure could have been drawn in a graphics program, but we found it 
+more convenient to use a short python script.
+''' 
+
 import numpy as np
 
 from matplotlib import pyplot as plt
